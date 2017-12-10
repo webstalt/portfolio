@@ -6,19 +6,17 @@
 
 **Поток:** Продвинутый курс веб-разработки (декабрь 2017 - январь 2018)
 
-**Сайт:** https://miabangtta.github.io/portfolio
-
 ### Requirements:
 * npm 5
 * gulp-cli
 
-### Install
+### Install:
 1. clone this repo
 2. npm i
 3. gulp
 -------------------------------------------------
 
 ### Добавленные плагины: 
-gulp-notify
-gulp-plumber
-перекладыватель шрифтов из dist в build 
+1. gulp-notify
+2. gulp-plumber
+3. перекладыватель шрифтов из dist в build 
