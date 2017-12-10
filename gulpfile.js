@@ -13,6 +13,9 @@ const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
+const notify = require("gulp-notify");
+const plumber = require('gulp-plumber');
+
 const paths = {
     root: './build',
     templates: {
@@ -24,12 +27,16 @@ const paths = {
         dest: 'build/assets/styles/'
     },
     images: {
-        src: '/src/images/**/*.*',
+        src: 'src/images/**/*.*',
         dest: 'build/assets/images/'
     },
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
+    },
+    fonts: {
+        src: 'src/fonts/*.*',
+        dest: 'build/assets/fonts/'
     }
 }
 
@@ -43,6 +50,14 @@ function templates(){
 // scss
 function styles() {
     return gulp.src('src/styles/app.scss')
+        .pipe(plumber({
+            errorHandler: notify.onError(function(error){
+                return {
+                    title: 'Styles',
+                    message: error.message
+                };
+            })
+        }))
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(sourcemaps.write())
@@ -85,6 +100,11 @@ function images() {
         .pipe(gulp.dest(paths.images.dest));
 }
 
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest));
+}
+
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
@@ -92,6 +112,6 @@ exports.images = images;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts),
+    gulp.parallel(styles, templates, images, scripts, fonts),
     gulp.parallel(watch, server)
 ));

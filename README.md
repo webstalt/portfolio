@@ -8,12 +8,17 @@
 
 **Сайт:** https://miabangtta.github.io/portfolio
 
-### Для работы сборки у вас должны быть установлены:
+### Requirements:
 * npm 5
 * gulp-cli
 
-### Как установить проект
+### Install
 1. clone this repo
 2. npm i
 3. gulp
 -------------------------------------------------
+
+### Добавленные плагины: 
+gulp-notify
+gulp-plumber
+перекладыватель шрифтов из dist в build 

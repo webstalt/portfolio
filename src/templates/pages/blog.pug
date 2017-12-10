@@ -4,15 +4,44 @@ block variables
     - var title = "Блог"
 
 block content
-    h1 Блог 
-    ul
-        li
-            h2 Заголовок статьи
-            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium quidem, repellat ullam iure adipisci dolores distinctio tempore veritatis, velit harum nobis voluptate consequuntur enim maxime quo quae, minus quibusdam?
-        li
-            h2 Сегодня вам нужно узнать
-            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus deserunt consequuntur, dolores eligendi quam sunt eum ut, quas modi vero enim neque harum quo esse officia nam quidem consequatur.
-        li
-            h2 Очень важная информация
-            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis numquam deleniti itaque, qui facilis dolores neque illo alias accusamus assumenda consectetur nemo saepe, laboriosam aliquid libero nam perferendis consequuntur nobis.
+    .wrapper
+        .maincontent
+            include ../common/header.pug
+            h1 Блог
+            .container.container_blog 
+                .blog__sidebar
+                    ul.blog__headings-list
+                        li.blog__headings-item.blog__headings-item_active
+                            a.blog__headings-link Заголовок статьи
+                        li.blog__headings-item
+                            a.blog__headings-link Заголовок статьи2
+                        li.blog__headings-item
+                            a.blog__headings-link Заголовок статьи3
+                        li.blog__headings-item
+                            a.blog__headings-link Заголовок статьи4
+                        li.blog__headings-item
+                            a.blog__headings-link Заголовок статьи5
+                .blog__content.articles
+                    ul.articles__list
+                        li.articles__item
+                            .articles__title Заголовок статьи
+                            .articles__date 07.12.2017
+                            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium quidem, repellat ullam iure adipisci dolores distinctio tempore veritatis, velit harum nobis voluptate consequuntur enim maxime quo quae, minus quibusdam?
+                        li.articles__item
+                            .articles__title Сегодня вам нужно узнать
+                            .articles__date 29.11.2017
+                            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus deserunt consequuntur, dolores eligendi quam sunt eum ut, quas modi vero enim neque harum quo esse officia nam quidem consequatur.
+                        li.articles__item
+                            .articles__title Очень важная информация
+                            .articles__date 28.11.2017
+                            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis numquam deleniti itaque, qui facilis dolores neque illo alias accusamus assumenda consectetur nemo saepe, laboriosam aliquid libero nam perferendis consequuntur nobis.
+                        li.articles__item
+                            .articles__title Очень важная информация
+                            .articles__date 28.11.2017
+                            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis numquam deleniti itaque, qui facilis dolores neque illo alias accusamus assumenda consectetur nemo saepe, laboriosam aliquid libero nam perferendis consequuntur nobis.
+                        li.articles__item
+                            .articles__title Очень важная информация
+                            .articles__date 28.11.2017
+                            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis numquam deleniti itaque, qui facilis dolores neque illo alias accusamus assumenda consectetur nemo saepe, laboriosam aliquid libero nam perferendis consequuntur nobis.            
+            include ../common/footer.pug
             

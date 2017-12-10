@@ -1,0 +1,67 @@
+html {
+    font-size: 16px;
+}
+  
+body {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.42;
+    background-color: #f4f5f0;
+    color: $gray;
+    -webkit-font-smoothing: antialiased;
+    -webkit-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+    position: relative;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+body, html {
+   height: 100%;
+}
+  
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 63px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 35px;
+    //roboto bold
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+
+    // roboto bold
+    &:hover {
+        text-decoration: underline;
+    }
+}
