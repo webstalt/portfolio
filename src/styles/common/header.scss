@@ -1,5 +1,5 @@
 .header {
-    background-image: url('../images/content/headerbg.png'); //jpg или png со срезанными углами
+    background-image: url('../images/content/forestbg.jpg');
     height: 100vh;
     position: relative;
 }
@@ -52,10 +52,9 @@
     height: 140px;
     border-radius: 50%;
     margin-bottom: 30px;
-}
-
-.header__avatar-pic {
     overflow: hidden;
+    background-position: 66% 20%; /* Положение фона */
+    background-repeat: no-repeat; 
 }
 
 .header__name {

@@ -1,12 +1,14 @@
 html {
+    height: 100%;
     font-size: 16px;
 }
-  
+
 body {
+    height: 100%;
     font-size: 1rem;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto-Regular", Arial, sans-serif;
     line-height: 1.42;
     background-color: #f4f5f0;
     color: $gray;
@@ -16,14 +18,17 @@ body {
 
 .wrapper {
     position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.section {
+    height: 100vh;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
-}
-  
-body, html {
-   height: 100%;
 }
   
 ul {
@@ -32,36 +37,61 @@ ul {
     list-style: none;
 }
 
-a {
-    cursor: pointer;
-}
-
-button {
-    cursor: pointer;
-}
-
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
 h1 {
     font-size: 63px;
-    white-space: nowrap;
     text-transform: uppercase;
+    font-family: "Sansus-Webissimo", Arial, Helvetica, sans-serif;
+    margin: 70px 0;
 }
 
 h2 {
     text-transform: uppercase;
     font-size: 35px;
-    //roboto bold
+    font-family: "Sansus-Webissimo", Arial, Helvetica, sans-serif;
+    margin: 40px 0;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
-
-    // roboto bold
+    cursor: pointer;
+    color: #6da3bd;
+    font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
     }
+}
+
+input {
+    border-radius: 20px;
+    border: 1px solid transparent;
+    &:focus {
+        border: 1px solid $fresh;
+        outline: none;
+    }
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    
+    font-size: 16px;
+    font-family: "Roboto-Medium";
+    color: #fff;
+    line-height: 45px;
+    background-color: $light;
+    transition: 0.3s;
+    &:hover {
+        background-color: $fresh;
+    }
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
 }

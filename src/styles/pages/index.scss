@@ -1,0 +1,60 @@
+.index {
+    background-image: url('../images/content/forestbg.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .form__block {
+    width: 380px;
+    height: 395px;
+    background-color: rgba(18, 38, 32, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.index__block {
+    display: none;
+}
+
+.index-socials__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.index__pages-btns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    & button {
+        flex-grow: 1;
+        width: 33.3%;    
+    }
+}
+
+.form__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    & button {
+        flex-grow: 1;
+        width: 50%;
+    }
+}
+
+.form__input {
+    width: 90%;
+}
+
+.index__copyright {
+    color: #fff;
+}
