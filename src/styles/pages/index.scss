@@ -1,4 +1,4 @@
-.index {
+.container__index {
     background-image: url('../images/content/forestbg.jpg');
     background-size: cover;
     height: 100vh;
@@ -57,4 +57,9 @@
 
 .index__copyright {
     color: #fff;
+    width: 100%;
+    height: 1rem;
+    text-align: center;
+    bottom: 1rem;
+    position: absolute;
 }
