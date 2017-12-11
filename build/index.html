@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
+    <title>Добро пожаловать</title>
+    <link rel="stylesheet" href="/assets/styles/app.min.css"/>
+    <script src="/assets/scripts.bundle.js" defer="defer"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="maincontent">
+        <div class="container container__index">
+          <div class="index__block">
+            <div class="index__avatar">
+              <div class="header__avatar" style="background-image:url(./assets/images/content/avatar.jpg);"><img class="header__avatar-pic visuallyhidden" src="./assets/images/content/avatar.jpg" alt="avatar"/></div>
+              <div class="header__name">Мария Миронова</div>
+              <p class="header__occ">Личный сайт веб-разработчика</p><img class="index__avatar-pic" src="" alt="avatar"/>
+            </div>
+            <div class="index__socials index-socials">
+              <ul class="index-socials__list">
+                <li class="index-socials__item" href="fb.com/encrem" target="_blank"><img class="socials__pic" src="./assets/images/icons/fb.svg" alt="fb"/></li>
+                <li class="index-socials__item" href="vk.com/mirmary" target="_blank"><img class="socials__pic" src="./assets/images/icons/vk.svg" alt="vk"/></li>
+                <li class="index-socials__item" href="github.com/miabangtta/" target="_blank"><img class="socials__pic" src="./assets/images/icons/github.svg" alt="github"/></li>
+                <li class="index-socials__item" href="linkedin.com/" target="_blank"><img class="socials__pic" src="./assets/images/icons/in.svg" alt="linkedin"/></li>
+              </ul>
+            </div>
+            <div class="index__pages-btns">
+              <button class="index__btn-works">Мои работы</button>
+              <button class="index__btn-about">Обо мне</button>
+              <button class="index__btn-blog">Блог</button>
+            </div>
+          </div>
+          <form class="form" action="" method="post">
+            <div class="form__block">                                           
+              <h2 class="form__title">Авторизуйтесь</h2>
+              <div class="form__row">
+                <input class="form__input" name="login" id="login" placeholder="Логин"/>
+              </div>
+              <div class="form__row">
+                <input class="form__input" name="password" id="password" placeholder="Пароль"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label" for="imahuman">
+                  <input class="form__input-checkbox" type="checkbox" id="imahuman" name="human"/><span class="form__input-square"><span class="form__input-check"></span></span><span class="form__label-text">Я человек</span>
+                </label>
+              </div>
+              <div class="form__row">Вы точно не робот?</div>
+              <div class="form__row">
+                <label class="form__label" for="notarobot">
+                  <input class="form__input form__input-radio" type="radio" id="notarobot" name="robot"/><span class="form__input-circle"><span class="form__input-inner"></span></span><span class="form__label-text">Да</span>
+                </label>
+                <label class="form__label" for="mayberobot">
+                  <input class="form__input form__input-radio" type="radio" id="mayberobot" name="robot"/><span class="form__input-circle"><span class="form__input-inner"></span></span><span class="form__label-text">Не уверен</span>
+                </label>
+              </div>
+              <div class="form__row">
+                <button class="form__btn-main">На главную</button>
+                <button class="form__btn-enter" type="submit">Войти</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="index__copyright">© Мария Миронова | Создано с любовью в LoftSchool | 2017-2018</div>
+    <div class="menu"><a class="menu__close">
+        <div class="menu__close-icon"></div></a>
+      <ul class="menu__list"> 
+        <li class="menu__item"><a class="menu__link" href="/index.html">Главная</a></li>
+        <li class="menu__item"><a class="menu__link" href="/about.html">Обо мне</a></li>
+        <li class="menu__item"><a class="menu__link" href="/my-works.html">Мои работы</a></li>
+        <li class="menu__item"><a class="menu__link" href="/blog.html">Блог</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
