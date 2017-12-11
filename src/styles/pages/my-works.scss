@@ -1,0 +1,112 @@
+.works__demos {
+    display: flex;
+    flex-direction: row;
+}
+
+.works__name, .works__images {
+    width: 50%;
+}
+
+.works__show {
+    border: 0;
+    background-color: $fresh;
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    padding: 15px;
+}
+
+.works__show-icon {
+    margin-right: 10px;
+}
+
+.reviews__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.reviews__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews__icon {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.reviews__content {
+    font-family: "Roboto-Italic", Arial, sans-serif;
+    font-style: italic;
+}
+
+.reviews__author {
+    color: $fresh;
+    font-family: "Roboto-BoldItalic", Arial, sans-serif;
+    font-style: italic;
+}
+
+.reviews__occ {
+    font-family: "Roboto-Italic", Arial, sans-serif;
+    font-style: italic;
+    &:before {
+        content: "— ";
+    }
+}
+
+.message {
+    height: 100vh;
+    background-image: url('../images/content/messagebg.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message__block {
+    width: 380px;
+}
+
+.message__title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.message__form {
+    display: flex;
+    flex-direction: column;
+    input {
+        border: 0;
+        border-radius: 15px;
+        height: 50px;
+        padding: 15px;
+        margin: 0 20px 20px 20px;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.message__send {
+    width: 50%;
+    border: 0;
+    background-color: $light;
+    color: #fff;
+    line-height: 45px;
+}
+
+.message__clear {
+    width: 50%;
+    border: 0;
+    background-color: $fresh;
+    color: #fff;
+    line-height: 45px;
+}

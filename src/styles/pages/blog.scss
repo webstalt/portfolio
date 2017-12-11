@@ -1,0 +1,33 @@
+.container_blog {
+    display: flex;
+    flex-direction: row;
+}
+
+.blog__sidebar {
+    width: 25%;
+    margin-right: 10%;
+}
+
+.blog__headings-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.blog__headings-link {
+    font-family: "Roboto-Regular", Arial, sans-serif;
+    font-size: 16px;
+    color: $dark;
+}
+
+.blog__headings-item_active {
+    .blog__headings-link {
+        font-family: "Roboto-Bold", Arial, sans-serif;
+        color: $fresh;
+    }
+}
+
+
+.articles__date {
+    color: $fresh;
+}

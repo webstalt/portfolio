@@ -1,0 +1,26 @@
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  background-color: $color;
+}
+
+@mixin medium {
+    @media screen and (max-width: $medium) {
+      @content;
+    }
+  }
+
+  @mixin tablets {
+    @media screen and (max-width: $tablets) {
+      @content;
+    }
+  }
+
+  @mixin phones {
+    @media screen and (max-width: $phones) {
+      @content;
+    }
+  }
+  
+  
