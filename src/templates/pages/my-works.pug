@@ -1,0 +1,49 @@
+extends ../template
+
+block variables
+    - var title = "Мои работы"
+
+block content
+    .wrapper
+        .maincontent
+            include ../common/header.pug
+            .container.works
+                h1 Мои работы
+                .works__demos
+                    .works__name
+                        .works__title Сайт авиакомпании
+                        .works__tech Html, css, javascript
+                        button.works__show 
+                            img.works__show-icon(src="./assets/images/icons/link.svg", alt="link")
+                            p Посмотреть сайт
+                    .works__images
+                        include ../common/slider.pug
+                .reviews
+                    h2.reviews__title Что обо мне говорят
+                    ul.reviews__list
+                        li.reviews__item
+                            .reviews__icon
+                                img.reviews__icon-pic(src="./assets/images/content/dima.jpg", alt="Дмитрий")
+                            .reviews__content Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                            .reviews__author Ковальчук Дмитрий
+                            .reviews__occ основатель Loftschool
+                        li.reviews__item
+                            .reviews__icon
+                                img.reviews__icon-pic(src="./assets/images/content/vova.jpg", alt="Владимир")
+                            .reviews__content Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                            .reviews__author Сабанцев Владимир
+                            .reviews__occ преподаватель
+                .message
+                    .message__block
+                        .message__title Связаться со мной
+                        form.message__form(action="")
+                            input.message__name(placeholder="Имя")
+                            input.message__email(placeholder="Email")
+                            input.message__content(placeholder="Ваше сообщение")
+                            .buttons
+                                button.message__send Отправить
+                                button.message__clear Очистить
+
+
+                    
+            include ../common/footer.pug

@@ -1,0 +1,53 @@
+.about {
+    display: flex;
+    flex-direction: row;
+}
+
+.about__left-side {
+    display: flex;
+    background-color: #ebefe2;
+    flex-direction: row;
+    width: 50%;
+}
+
+.about__right-side {
+    width: 50%;
+}
+
+
+.skills__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.contacts {    
+    position: relative;
+    height: 100vh;
+}
+
+.contacts__block {
+    position: absolute;
+    width: 380px;
+    height: 310px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(244,245,240,0.85);
+    border-radius: 5px;
+    overflow: hidden;
+    // &:nth-child(0) {
+    //     text-align: center;
+    // }
+}
+
+.contacts__item {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+.contacts__icon {
+    margin-right: 10px;
+
+}

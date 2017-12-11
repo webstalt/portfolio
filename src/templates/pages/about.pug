@@ -1,0 +1,65 @@
+extends ../template
+
+block variables
+    - var title = "Обо мне"
+
+block content
+    .wrapper
+        .maincontent
+            include ../common/header.pug
+            .container                
+                .section.about
+                    .about__left-side
+                        h1.section__title Обо мне
+                        .profile
+                            .profile__photo
+                                img.profile__photo-img
+                            h2.profile__title Кто я
+                            .profile__text 
+                                p Я веб разработчик из Москвы. Мне 22 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                                p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                    .about__right-side
+                        .skills
+                            h2.skills__title Чем я могу быть вам полезна
+                            //- include ../common/technologies.pug
+                            .skills__block 
+                                .skills__text
+                                    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                                .skills__title Frontend
+                                ul.skills__list
+                                    li.skills__item HTML5
+                                    li.skills__item CSS3
+                                    li.skills__item JavaScript & jQuery
+                                .skills__title Backend
+                                ul.skills__list
+                                    li.skills__item PHP
+                                    li.skills__item mySQL
+                                    li.skills__item Node.js & npm
+                                    li.skills__item Mongo.db
+                                .skills__title WorkFlow
+                                ul.skills__list
+                                    li.skills__item Git
+                                    li.skills__item Gulp
+                                    li.skills__item Bower
+                .contacts
+                    .map                    
+                    .contacts__block
+                        h2.contacts__title Контакты
+                        ul.contacts__list
+                            li.contacts__item
+                                .contacts__icon
+                                    img.contacts__icon-pic(src="./assets/images/icons/skype.svg", alt="skype")
+                                p mary.mary.-_-
+                            li.contacts__item
+                                .contacts__icon
+                                        img.contacts__icon-pic(src="./assets/images/icons/envelope2.svg", alt="email")
+                                p bangtta@yandex.ru
+                            li.contacts__item
+                                .contacts__icon
+                                    img.contacts__icon-pic(src="./assets/images/icons/phone2.svg", alt="phone")
+                                p 8-888-888-88-61
+                            li.contacts__item
+                                .contacts__icon
+                                    img.contacts__icon-pic(src="./assets/images/icons/map_marker.svg", alt="address")
+                                p Москва, ул. Охотный ряд, д. 1
+        include ../common/footer.pug
