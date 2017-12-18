@@ -8,40 +8,49 @@
     <meta content="" name="keywords"/>
     <title>Мои работы</title>
     <link rel="stylesheet" href="/assets/styles/app.min.css"/>
+    <link rel="icon" type="image/png" href="/assets/images/content/fav_forest.png" sizes="16x16"/>
     <script src="/assets/scripts.bundle.js" defer="defer"></script>
+    <script src="/assets/scripts/svg4everybody.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <div class="maincontent">
-        <header class="header">
-          <div class="header-top">
-            <div class="header__socials">
-              <ul class="socials__list">
-                <li class="socials__item"><a class="socials__link" href="fb.com/encrem" target="_blank"><img class="socials__pic" src="./assets/images/icons/fb.svg" alt="fb"/></a></li>
-                <li class="socials__item"><a class="socials__link" href="vk.com/mirmary" target="_blank"><img class="socials__pic" src="./assets/images/icons/vk.svg" alt="vk"/></a></li>
-                <li class="socials__item"><a class="socials__link" href="github.com/miabangtta/" target="_blank"><img class="socials__pic" src="./assets/images/icons/github.svg" alt="github"/></a></li>
-                <li class="socials__item"><a class="socials__link" href="linkedin.com/" target="_blank"><img class="socials__pic" src="./assets/images/icons/in.svg" alt="linkedin"/></a></li>
-              </ul>
-            </div>
-            <div class="header__menu">
-              <div class="menu__icon"><a class="menu__link"><img class="menu__pic" src="./assets/images/icons/hamburger.svg" alt="menu"/></a></div>
-              <div class="menu"></div>
+      <section class="section hero">
+        <div class="hero__socials">
+          <ul class="socials__list">
+            <!-- куда применять модификатор social_rounded?-->
+            <li class="socials__item"><a class="socials__link" href="fb,fb.com/encrem" target="_blank"><img class="socials__pic" src="./assets/images/icons/fb.svg" alt="fb"/></a></li>
+            <li class="socials__item"><a class="socials__link" href="vk,vk.com/mirmary" target="_blank"><img class="socials__pic" src="./assets/images/icons/vk.svg" alt="vk"/></a></li>
+            <li class="socials__item"><a class="socials__link" href="github,github.com/miabangtta/" target="_blank"><img class="socials__pic" src="./assets/images/icons/github.svg" alt="github"/></a></li>
+            <li class="socials__item"><a class="socials__link" href="in,linkedin.com" target="_blank"><img class="socials__pic" src="./assets/images/icons/in.svg" alt="in"/></a></li>
+          </ul>
+        </div><a class="hamburger hero__menu" href="#">
+          <div class="hero__menu-icon"><img class="hero__menu-pic" src="./assets/images/icons/hamburger.svg" alt="menu"/></div>
+          <div class="menu"></div></a>
+        <div class="hero__user">
+          <div class="user"> 
+            <!-- класс user формирует отображение, класс перед ним - для позиционирования-->
+            <div class="user__pic" style="background-image:url(./assets/images/content/avatar.jpg);"><img class="user__pic-img visuallyhidden" src="./assets/images/content/avatar.jpg" alt="avatar"/></div>
+            <div class="user__info">
+              <div class="user__name">Мария Миронова</div>
+              <div class="user__data">Личный сайт веб-разработчика</div>
             </div>
           </div>
-          <div class="header__about"> 
-            <div class="header__avatar" style="background-image:url(./assets/images/content/avatar.jpg);"><img class="header__avatar-pic visuallyhidden" src="./assets/images/content/avatar.jpg" alt="avatar"/></div>
-            <div class="header__name">Мария Миронова</div>
-            <p class="header__occ">Личный сайт веб-разработчика</p>
-          </div><a class="arrow-scroll"><img class="arrow-scroll__img" src="./assets/images/icons/arrow_down.svg"/></a>
-        </header>
-        <div class="container works">
-          <h1>Мои работы</h1>
+        </div>
+        <div class="hero__arrow"><a class="arrow-down" href="#"><img class="arrow-down__img" src="./assets/images/icons/arrow_down.svg"/></a></div>
+      </section>
+      <section class="section">
+        <svg class="triangle triangle_fill_white triangle_up" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+          <polygon points="0,0   0,86   500,86   500,75.5 1000,0   1000,86   500,86   500,75.5">               </polygon>
+        </svg>
+        <div class="block-title">Мои работы</div>
+        <div class="works container">               
           <div class="works__demos">
             <div class="works__name">
-              <div class="works__title">Сайт авиакомпании</div>
+              <div class="block-subtitle">Сайт авиакомпании</div>
               <div class="works__tech">Html, css, javascript</div>
-              <button class="works__show"> <img class="works__show-icon" src="./assets/images/icons/link.svg" alt="link"/>
-                <p>Посмотреть сайт</p>
+              <button class="button button-show"> 
+                <!-- или модификатор?--><img class="button-show__icon" src="./assets/images/icons/link.svg" alt="link"/>
+                <div class="button-show__text">Посмотреть сайт</div>
               </button>
             </div>
             <div class="works__images">
@@ -52,84 +61,74 @@
                   <li class="slide"></li>
                 </ul>
                 <div class="buttons">
-                  <button class="controls" id="previous">&lt;</button>
-                  <button class="controls" id="next">&gt;</button>
+                  <button class="button controls" id="previous">&lt;</button>
+                  <button class="button controls" id="next">&gt;</button>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="reviews">
-            <h2 class="reviews__title">Что обо мне говорят</h2>
-            <ul class="reviews__list">
-              <li class="reviews__item">
-                <div class="reviews__icon"><img class="reviews__icon-pic" src="./assets/images/content/dima.jpg" alt="Дмитрий"/></div>
-                <div class="reviews__content">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
-                <div class="reviews__author">Ковальчук Дмитрий</div>
-                <div class="reviews__occ">основатель Loftschool</div>
-              </li>
-              <li class="reviews__item">
-                <div class="reviews__icon"><img class="reviews__icon-pic" src="./assets/images/content/vova.jpg" alt="Владимир"/></div>
-                <div class="reviews__content">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
-                <div class="reviews__author">Сабанцев Владимир</div>
-                <div class="reviews__occ">преподаватель</div>
-              </li>
-            </ul>
-          </div>
-          <div class="message">
-            <div class="message__block">
-              <div class="message__title">Связаться со мной</div>
-              <form class="message__form" action="">
-                <input class="message__name" placeholder="Имя"/>
-                <input class="message__email" placeholder="Email"/>
-                <input class="message__content" placeholder="Ваше сообщение"/>
-                <div class="buttons">
-                  <button class="message__send">Отправить</button>
-                  <button class="message__clear">Очистить</button>
-                </div>
-              </form>
             </div>
           </div>
         </div>
-        <footer class="footer">
-          <div class="footer__top">
-            <div class="footer__container">
-              <div class="footer__about"> 
-                <p>Этот сайт сделан в рамках обучения в Школе онлайн образования LoftSchool. </p>
+      </section>
+      <div class="block-title">Что обо мне говорят</div>
+      <section class="section reviews">           
+        <div class="container">
+          <ul class="reviews__list">
+            <li class="reviews__item">
+              <div class="reviews__icon"><img class="reviews__icon-pic" src="./assets/images/content/dima.jpg" alt="Дмитрий"/></div>
+              <div class="reviews__content">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+              <div class="reviews__author">Ковальчук Дмитрий</div>
+              <div class="reviews__occ">основатель Loftschool</div>
+            </li>
+            <li class="reviews__item">
+              <div class="reviews__icon"><img class="reviews__icon-pic" src="./assets/images/content/vova.jpg" alt="Владимир"/></div>
+              <div class="reviews__content">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+              <div class="reviews__author">Сабанцев Владимир</div>
+              <div class="reviews__occ">преподаватель</div>
+            </li>
+          </ul>
+        </div>
+        <div class="message">
+          <div class="message__block">
+            <div class="block-subtitle">Связаться со мной</div>
+            <form class="message__form" action="">
+              <input class="message__name" placeholder="Имя"/>
+              <input class="message__email" placeholder="Email"/>
+              <input class="message__content" placeholder="Ваше сообщение"/>
+              <div class="message__buttons">
+                <button class="button message__send">Отправить</button>
+                <button class="button message__clear">Очистить                  </button>
               </div>
-              <div class="footer__menu footer-menu">
-                <ul class="footer-menu__list">
-                  <li class="footer-menu__item"> <a class="footer-menu__link" href="/my-works.html">Мои работы</a></li>
-                  <li class="footer-menu__item"><a class="footer-menu__link" href="/about.html">Обо мне</a></li>
-                  <li class="footer-menu__item"><a class="footer-menu__link" href="/blog.html">Блог</a></li>
-                  <li class="footer-menu__item"><a class="footer-menu__link" href="/auth.html">Авторизация</a></li>
-                </ul>
-                <div class="footer__socials footer-socials">
-                  <ul class="footer-socials__list">
-                    <li class="footer-socials__item"><a class="footer-socials__icon" href="fb.com/encrem" target="_blank"><img class="footer-socials__pic" src="./assets/images/icons/fb.svg" alt="Fb"/></a></li>
-                    <li class="footer-socials__item"><a class="footer-socials__icon" href="vk.com/mirmary" target="_blank"><img class="footer-socials__pic" src="./assets/images/icons/vk.svg" alt="Vk"/></a></li>
-                    <li class="footer-socials__item">                               <a class="footer-socials__icon" href="github.com/miabangtta/" target="_blank"><img class="footer-socials__pic" src="./assets/images/icons/github.svg" alt="Github"/></a></li>
-                    <li class="footer-socials__item"><a class="footer-socials__icon" href="linkedin.com/" target="_blank"><img class="footer-socials__pic" src="./assets/images/icons/in.svg" alt="LinkedIn"/></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="footer__quote">
-                <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p>
-                <p>— Martin Golding</p>
-              </div>
-            </div>
+            </form>
           </div>
-          <div class="copyright">© Мария Миронова | Создано с любовью в LoftSchool | 2017-2018</div>
-        </footer>
+        </div>
+      </section>
+    </div>
+    <footer class="footer"> 
+      <div class="footer__row footer__row-top">
+        <div class="footer__col footer__about">Этот сайт сделан в рамках обучения в Школе онлайн образования LoftSchool. </div>
+        <div class="footer__col footer__nav">
+          <nav class="menu footer__menu">
+            <ul class="menu__list"> 
+              <li class="menu__item"> <a class="menu__link" href="/my-works.html">Мои работы  </a></li>
+              <li class="menu__item"> <a class="menu__link" href="">Обо мне  </a></li>
+              <li class="menu__item"> <a class="menu__link" href="">Блог  </a></li>
+              <li class="menu__item"> <a class="menu__link" href="">Авторизация  </a></li>
+            </ul>
+          </nav>
+          <div class="socials socials__rounded"></div>
+          <ul class="socials__list">
+            <!-- куда применять модификатор social_rounded?-->
+            <li class="socials__item"><a class="socials__link" href="fb,fb.com/encrem" target="_blank"><img class="socials__pic" src="./assets/images/icons/fb.svg" alt="fb"/></a></li>
+            <li class="socials__item"><a class="socials__link" href="vk,vk.com/mirmary" target="_blank"><img class="socials__pic" src="./assets/images/icons/vk.svg" alt="vk"/></a></li>
+            <li class="socials__item"><a class="socials__link" href="github,github.com/miabangtta/" target="_blank"><img class="socials__pic" src="./assets/images/icons/github.svg" alt="github"/></a></li>
+            <li class="socials__item"><a class="socials__link" href="in,linkedin.com" target="_blank"><img class="socials__pic" src="./assets/images/icons/in.svg" alt="in"/></a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__quote">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+          <div class="footer__quote-author">— Martin Golding</div>
+        </div>
       </div>
-    </div>
-    <div class="menu"><a class="menu__close">
-        <div class="menu__close-icon"></div></a>
-      <ul class="menu__list"> 
-        <li class="menu__item"><a class="menu__link" href="/index.html">Главная</a></li>
-        <li class="menu__item"><a class="menu__link" href="/about.html">Обо мне</a></li>
-        <li class="menu__item"><a class="menu__link" href="/my-works.html">Мои работы</a></li>
-        <li class="menu__item"><a class="menu__link" href="/blog.html">Блог</a></li>
-      </ul>
-    </div>
+      <div class="footer__row footer__copyright">© Мария Миронова | Создано с любовью в LoftSchool | 2017-2018</div>
+    </footer>
   </body>
 </html>

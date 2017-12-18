@@ -3,51 +3,100 @@
     flex-direction: row;
 }
 
-.about__left-side {
+.about__left {
     display: flex;
     background-color: #ebefe2;
     flex-direction: row;
     width: 50%;
+    position: relative;
 }
 
-.about__right-side {
+.about__right {
     width: 50%;
+    position: relative;
 }
 
+.triangle {
+    &_up {
+        transform: translateY(-100%);
+        width: 100%;
+        position: absolute; // когда вешаю позиционирование на .about__triangle, треугольник оказывается выше, чем нужно
+    }
+    &_fill {
+        &_white {
+            fill: #f4f5f0;
+        }
+        &_beige {
+            fill: #ebefe2;
+        }
+    }
+}
 
-.skills__list {
+.about__left-content {
     display: flex;
     flex-direction: row;
 }
 
-.contacts {    
-    position: relative;
-    height: 100vh;
+.block-title {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
 }
 
-.contacts__block {
+.user-desc {
+    display: block;
+    width: 50%;
+}
+
+.user-desc__avatar {
+    height: 40%;
+    overflow: hidden;
+}
+
+.user-desc__title {
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-row__list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.map {    
+    position: relative;
+    background-image: url('../images/content/mapbg.jpg');
+    background-size: cover;
+}
+
+.map__data {
     position: absolute;
     width: 380px;
-    height: 310px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: rgba(244,245,240,0.85);
     border-radius: 5px;
-    overflow: hidden;
-    // &:nth-child(0) {
-    //     text-align: center;
-    // }
+    overflow: hidden; 
+    padding-bottom: 40px;
 }
 
-.contacts__item {
+.contacts__title {
+    text-align: center;
+}
+
+.contacts-row {
     margin-left: 40px;
     display: flex;
     flex-direction: row;
     margin-bottom: 25px;
 }
 
-.contacts__icon {
+.contacts-row__icon {
     margin-right: 10px;
-
 }

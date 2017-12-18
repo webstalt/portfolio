@@ -1,3 +1,8 @@
+.works {
+    display: flex;
+    flex-direction: column;
+}
+
 .works__demos {
     display: flex;
     flex-direction: row;
@@ -7,19 +12,28 @@
     width: 50%;
 }
 
-.works__show {
-    border: 0;
-    background-color: $fresh;
-    color: #fff;
+.button-show {
     border-radius: 20px;
+    padding: 0 15px;
     display: flex;
-    flex-direction: row;
-    height: 45px;
-    padding: 15px;
+    align-items: center;
 }
 
-.works__show-icon {
+.button-show__icon {
     margin-right: 10px;
+}
+
+.button-show__text {
+    display: inline-flex;
+}
+
+.reviews {
+    background-image: url('../images/content/messagebg.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .reviews__list {
@@ -59,17 +73,11 @@
     }
 }
 
-.message {
-    height: 100vh;
-    background-image: url('../images/content/messagebg.jpg');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .message__block {
     width: 380px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
 }
 
 .message__title {
@@ -82,31 +90,21 @@
     display: flex;
     flex-direction: column;
     input {
-        border: 0;
-        border-radius: 15px;
         height: 50px;
         padding: 15px;
         margin: 0 20px 20px 20px;
     }
 }
 
-.buttons {
+.message__buttons {
     display: flex;
     flex-direction: row;
 }
 
 .message__send {
     width: 50%;
-    border: 0;
-    background-color: $light;
-    color: #fff;
-    line-height: 45px;
 }
 
 .message__clear {
-    width: 50%;
-    border: 0;
-    background-color: $fresh;
-    color: #fff;
-    line-height: 45px;
+    width: 50%; 
 }

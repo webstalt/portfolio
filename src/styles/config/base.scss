@@ -1,6 +1,14 @@
 html {
     height: 100%;
     font-size: 16px;
+
+    @include tablets {
+        font-size: 15px;
+    }
+    
+    @include phones {
+        font-size: 14px;
+    }
 }
 
 body {
@@ -19,12 +27,17 @@ body {
 .wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
     min-height: 100vh;
 }
 
 .section {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
 }
 
 *, *::before, *::after {
@@ -41,18 +54,50 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
-h1 {
+.block-title {
     font-size: 63px;
     text-transform: uppercase;
     font-family: "Sansus-Webissimo", Arial, Helvetica, sans-serif;
     margin: 70px 0;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 90px;
+        height: 5px;
+        background-color: $gray;
+    }
 }
 
-h2 {
+.block-subtitle {
     text-transform: uppercase;
     font-size: 35px;
     font-family: "Sansus-Webissimo", Arial, Helvetica, sans-serif;
     margin: 40px 0;
+    position: relative;
+    display: inline-block;
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 90px;
+        height: 5px;
+        background-color: $gray;
+    }
+    &_centered {
+        text-align: center;
+    }
 }
 
 a {
@@ -67,16 +112,16 @@ a {
 input {
     border-radius: 20px;
     border: 1px solid transparent;
+    transition: 0.3s;
     &:focus {
-        border: 1px solid $fresh;
+        border: 1px solid $light;
         outline: none;
     }
 }
 
-button {
+.button {
     cursor: pointer;
-    border: none;
-    
+    border: none;    
     font-size: 16px;
     font-family: "Roboto-Medium";
     color: #fff;
@@ -85,6 +130,17 @@ button {
     transition: 0.3s;
     &:hover {
         background-color: $fresh;
+    }
+    &:not(:last-child) {
+        border-right: 1px solid #fff;
+    }
+}
+
+.button_transparent {
+    background-color: transparent;
+    border: 1px solid #fff;
+    &:hover {
+        border: 1px solid $fresh;
     }
 }
 

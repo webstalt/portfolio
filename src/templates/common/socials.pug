@@ -1,0 +1,13 @@
+ul.socials__list
+    // куда применять модификатор social_rounded?
+    -
+        var socials = [
+            ['fb', 'fb.com/encrem'],
+            ['vk', 'vk.com/mirmary'],
+            ['github', 'github.com/miabangtta/'],
+            ['in', 'linkedin.com']
+        ]
+    each item in socials
+        li.socials__item
+            a(href=`${item}` target="_blank").socials__link
+                img.socials__pic(src=`./assets/images/icons/${item[0]}.svg`, alt=`${item[0]}`)

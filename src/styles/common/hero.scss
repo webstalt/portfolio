@@ -1,0 +1,40 @@
+.hero {
+    background-image: url('../images/content/forestbg.jpg');
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    padding: 30px;
+}
+
+.hero__menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.hero__menu-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.hero__user {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(50%);
+}
+
+.arrow-down {
+    display: inline-flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    opacity: 0.7;
+    transition: 0.3s;
+    z-index: 100;
+    &:hover {
+        opacity: 1;
+    }    
+}

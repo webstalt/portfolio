@@ -1,0 +1,36 @@
+extends ../template
+
+block variables 
+    - var title = "Добро пожаловать"
+
+block content
+    section.section.index        
+        form(action="" method="post").form
+            .form__block                                            
+                h2.block-subtitle Авторизуйтесь
+                .form__row
+                    input(name="login" id="login" placeholder="Логин").form__input.form__input-text
+                .form__row
+                    input(name="password" id="password" placeholder="Пароль").form__input.form__input-text
+                .form__row
+                    label(for="imahuman").form__label
+                        input(type="checkbox" id="imahuman" name="human").form__input-checkbox
+                        span.form__input-square
+                            span.form__input-check
+                        span.form__label-text Я человек
+                .form__row Вы точно не робот?
+                .form__row
+                    label(for="notarobot").form__label
+                        input(type="radio" id="notarobot" name="robot").form__input.form__input-radio 
+                        span.form__input-circle
+                            span.form__input-inner
+                        span.form__label-text Да
+                    label(for="mayberobot").form__label.form__label_left_40
+                        input(type="radio" id="mayberobot" name="robot").form__input.form__input-radio
+                        span.form__input-circle
+                            span.form__input-inner
+                        span.form__label-text Не уверен
+                .form__row
+                    button.button.form__btn-main(type="button") На главную
+                    button.button.form__btn-enter(type="submit") Войти
+    .index__copyright © Мария Миронова | Создано с любовью в LoftSchool | 2017-2018

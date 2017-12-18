@@ -1,13 +1,13 @@
-.container__index {
+.index {
     background-image: url('../images/content/forestbg.jpg');
     background-size: cover;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
- .form__block {
+ .form__block, .index__block {
     width: 380px;
     height: 395px;
     background-color: rgba(18, 38, 32, 0.6);
@@ -20,16 +20,28 @@
     overflow: hidden;
 }
 
+.index__auth {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    & button {
+        border-radius: 20px;
+        padding: 0 25px;
+    }
+}
+
 .index__block {
-    display: none;
+    .user {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .socials {
+        margin: 30px 0;
+    }
 }
 
-.index-socials__list {
-    display: flex;
-    flex-direction: row;
-}
-
-.index__pages-btns {
+.index__btns {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -53,6 +65,89 @@
 
 .form__input {
     width: 90%;
+}
+
+.form__input-text {
+    height: 45px;
+}
+
+.form__input-radio, .form__input-checkbox {
+    left: -9999px;
+    position: absolute;
+}
+
+.form__input-circle {
+    @include circle(1rem, #fff);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 3px;
+    border: 1px solid transparent;
+}
+
+.form__input-inner {
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: $fresh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s;
+  }
+
+.form__input-square {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: $fresh;
+    margin-right: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.form__input-check {
+    width: 0;
+    height: 0;
+    color: #fff;
+    position: absolute;
+    transform: rotate(-45deg);
+    transition: .2s;
+  }
+
+
+.form__input-radio:checked + .form__input-circle .form__input-inner {
+    width: 7px;
+    height: 7px;
+}
+
+.form__input-radio:checked ~ .form__label-text {
+    color: $fresh;
+}
+
+.form__input-checkbox:checked + .form__input-square .form__input-check {
+  margin-left: 2px;
+  margin-top: -1px;
+  width: 8px;
+  height: 5px;
+  border-bottom: solid 2px #fff;
+  border-left: solid 2px #fff;
+}
+
+.form__input-radio:focus + .form__input-circle {
+    border-color: $light; 
+}
+
+.form__input-checkbox:focus + .form__input-square {
+    border-color: $light;     
+}
+
+.form__label_left_40 {
+    margin-left: 40px;
 }
 
 .index__copyright {

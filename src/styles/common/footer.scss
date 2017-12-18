@@ -1,68 +1,60 @@
-
 .footer {
+    // position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    // bottom: -190px;
+    height: 190px;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: row;
     color: #fff;
-    position: absolute;
-    top: 100%;
-    bottom: -190px;
     font-size: 15px;
 }
 
-.footer__top {
+.footer__row-top {
     height: 150px;
     background-color: rgba(55,62,66,0.85);
 }
 
-.footer__container {
-    display: flex;
-    flex-direction: row;
-    &>div {
-        width: 30%;
-        margin-top: 30px;
-    }
+.footer__col {
+    width: 33%;
+    margin-top: 30px;
 }
 
 .footer__about {
     margin-left: 30px;
+    opacity: .5;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer__menu {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-menu__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.footer-menu__item {
-    margin-right: 40px;
-}
-
-.footer-menu__link {
-    white-space: nowrap;
-    font-family: "Roboto-Bold", Arial, sans-serif;
-}
-
-.footer-socials__list {
-    display: flex;
-    flex-direction: row;
-}
-
-.footer-socials__pic {
-    width: 25px;
-    height: 25px;
+    margin-bottom: 10px;
 }
 
 .footer__quote {
     margin-right: 30px;
+    font-family: 'Roboto-Italic';
+    opacity: .5;
 }
 
-.copyright {
+.footer__quote-author {
+    font-family: 'Roboto-BoldItalic';
+}
+
+.footer__copyright {
     background-color: rgba(108, 156, 90, 0.85);
     height: 40px;
     line-height: 40px;
-    text-align: center;
+    justify-content: center;
     vertical-align: middle;
+    color: rgba(#fff, 0.5);
 }

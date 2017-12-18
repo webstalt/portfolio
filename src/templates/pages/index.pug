@@ -4,56 +4,14 @@ block variables
     - var title = "Добро пожаловать"
 
 block content
-    .wrapper
-        .maincontent
-            .container.container__index
-                .index__block
-                    .index__avatar
-                        .header__avatar(style="background-image:url(./assets/images/content/avatar.jpg)")
-                            img.header__avatar-pic.visuallyhidden(src="./assets/images/content/avatar.jpg" alt="avatar") 
-                        .header__name Мария Миронова
-                        p.header__occ Личный сайт веб-разработчика
-                        img.index__avatar-pic(src="", alt="avatar")
-                    .index__socials.index-socials
-                        ul.index-socials__list
-                            li.index-socials__item(href="fb.com/encrem" target="_blank")
-                                img.socials__pic(src="./assets/images/icons/fb.svg", alt="fb")
-                            li.index-socials__item(href="vk.com/mirmary" target="_blank")
-                                img.socials__pic(src="./assets/images/icons/vk.svg", alt="vk")
-                            li.index-socials__item(href="github.com/miabangtta/" target="_blank")
-                                img.socials__pic(src="./assets/images/icons/github.svg", alt="github")
-                            li.index-socials__item(href="linkedin.com/" target="_blank")
-                                img.socials__pic(src="./assets/images/icons/in.svg", alt="linkedin")
-                    .index__pages-btns
-                        button.index__btn-works Мои работы
-                        button.index__btn-about Обо мне
-                        button.index__btn-blog Блог
-                form(action="" method="post").form
-                    .form__block                                            
-                        h2.form__title Авторизуйтесь
-                        .form__row
-                            input(name="login" id="login" placeholder="Логин").form__input
-                        .form__row
-                            input(name="password" id="password" placeholder="Пароль").form__input
-                        .form__row
-                            label(for="imahuman").form__label
-                                input(type="checkbox" id="imahuman" name="human").form__input-checkbox
-                                span.form__input-square
-                                    span.form__input-check
-                                span.form__label-text Я человек
-                        .form__row Вы точно не робот?
-                        .form__row
-                            label(for="notarobot").form__label
-                                input(type="radio" id="notarobot" name="robot").form__input.form__input-radio 
-                                span.form__input-circle
-                                    span.form__input-inner
-                                span.form__label-text Да
-                            label(for="mayberobot").form__label
-                                input(type="radio" id="mayberobot" name="robot").form__input.form__input-radio
-                                span.form__input-circle
-                                    span.form__input-inner
-                                span.form__label-text Не уверен
-                        .form__row
-                            button.form__btn-main На главную
-                            button(type="submit").form__btn-enter Войти
+    section.section.index
+        .index__auth 
+            button.button(type="button").button_transparent Авторизоваться
+        .index__block
+            include ../common/user.pug
+            include ../common/socials.pug            
+            .index__btns
+                button.button.index__btn-works(type="button" href="/my-works.html") Мои работы
+                button.button.index__btn-about(type="button" href="/about.html") Обо мне
+                button.button.index__btn-blog(type="button" href="/blog.html") Блог        
     .index__copyright © Мария Миронова | Создано с любовью в LoftSchool | 2017-2018

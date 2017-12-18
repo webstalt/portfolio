@@ -5,45 +5,46 @@ block variables
 
 block content
     .wrapper
-        .maincontent
-            include ../common/header.pug
-            .container.works
-                h1 Мои работы
+        include ../common/hero.pug
+        section.section
+            svg.triangle.triangle_fill_white.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none")
+                polygon(points="0,0   0,86   500,86   500,75.5 1000,0   1000,86   500,86   500,75.5")                
+            .block-title Мои работы
+            .works.container                
                 .works__demos
                     .works__name
-                        .works__title Сайт авиакомпании
+                        .block-subtitle Сайт авиакомпании
                         .works__tech Html, css, javascript
-                        button.works__show 
-                            img.works__show-icon(src="./assets/images/icons/link.svg", alt="link")
-                            p Посмотреть сайт
+                        button.button.button-show 
+                            // или модификатор?
+                            img.button-show__icon(src="./assets/images/icons/link.svg", alt="link")
+                            .button-show__text Посмотреть сайт
                     .works__images
                         include ../common/slider.pug
-                .reviews
-                    h2.reviews__title Что обо мне говорят
-                    ul.reviews__list
-                        li.reviews__item
-                            .reviews__icon
-                                img.reviews__icon-pic(src="./assets/images/content/dima.jpg", alt="Дмитрий")
-                            .reviews__content Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                            .reviews__author Ковальчук Дмитрий
-                            .reviews__occ основатель Loftschool
-                        li.reviews__item
-                            .reviews__icon
-                                img.reviews__icon-pic(src="./assets/images/content/vova.jpg", alt="Владимир")
-                            .reviews__content Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                            .reviews__author Сабанцев Владимир
-                            .reviews__occ преподаватель
-                .message
-                    .message__block
-                        .message__title Связаться со мной
-                        form.message__form(action="")
-                            input.message__name(placeholder="Имя")
-                            input.message__email(placeholder="Email")
-                            input.message__content(placeholder="Ваше сообщение")
-                            .buttons
-                                button.message__send Отправить
-                                button.message__clear Очистить
-
-
-                    
-            include ../common/footer.pug
+        .block-title Что обо мне говорят
+        section.section.reviews            
+            .container
+                ul.reviews__list
+                    li.reviews__item
+                        .reviews__icon
+                            img.reviews__icon-pic(src="./assets/images/content/dima.jpg", alt="Дмитрий")
+                        .reviews__content Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .reviews__author Ковальчук Дмитрий
+                        .reviews__occ основатель Loftschool
+                    li.reviews__item
+                        .reviews__icon
+                            img.reviews__icon-pic(src="./assets/images/content/vova.jpg", alt="Владимир")
+                        .reviews__content Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .reviews__author Сабанцев Владимир
+                        .reviews__occ преподаватель
+            .message
+                .message__block
+                    .block-subtitle Связаться со мной
+                    form.message__form(action="")
+                        input.message__name(placeholder="Имя")
+                        input.message__email(placeholder="Email")
+                        input.message__content(placeholder="Ваше сообщение")
+                        .message__buttons
+                            button.button.message__send Отправить
+                            button.button.message__clear Очистить                  
+    include ../common/footer.pug

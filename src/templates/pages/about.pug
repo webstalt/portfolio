@@ -4,62 +4,70 @@ block variables
     - var title = "Обо мне"
 
 block content
-    .wrapper
-        .maincontent
-            include ../common/header.pug
-            .container                
-                .section.about
-                    .about__left-side
-                        h1.section__title Обо мне
-                        .profile
-                            .profile__photo
-                                img.profile__photo-img
-                            h2.profile__title Кто я
-                            .profile__text 
-                                p Я веб разработчик из Москвы. Мне 22 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                                p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-                    .about__right-side
-                        .skills
-                            h2.skills__title Чем я могу быть вам полезна
-                            //- include ../common/technologies.pug
-                            .skills__block 
-                                .skills__text
-                                    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-                                .skills__title Frontend
-                                ul.skills__list
-                                    li.skills__item HTML5
-                                    li.skills__item CSS3
-                                    li.skills__item JavaScript & jQuery
-                                .skills__title Backend
-                                ul.skills__list
-                                    li.skills__item PHP
-                                    li.skills__item mySQL
-                                    li.skills__item Node.js & npm
-                                    li.skills__item Mongo.db
-                                .skills__title WorkFlow
-                                ul.skills__list
-                                    li.skills__item Git
-                                    li.skills__item Gulp
-                                    li.skills__item Bower
+    .wrapper    
+        include ../common/hero.pug
+        section.section.about
+            .about__left
+                .about__triangle.about__triangle_left
+                    svg.triangle.triangle_fill_beige.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none")
+                        polygon(points="0,0   0,86   500.8,86   500.8,75.5")                     
+                // абсолютом треугольники отрицательным топом 
+                .about__left-content.container 
+                    .block-title Обо мне
+                    .user-desc
+                        .user-desc__avatar
+                            img.user-desc__pic(src="./assets/images/content/avatar.jpg", alt="avatar")
+                        .user-desc__title
+                            .block-subtitle.block-subtitle_centered Кто я
+                        .user-desc__text.text-block
+                            p Я веб разработчик из Москвы. Мне 22 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                            p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .about__right
+                .about__triangle.about__triangle_right
+                    svg.triangle.triangle_fill_white.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none")
+                        polygon(points="500,0   500,86   0,86   0,75.5")
+                .about__right-title.block-subtitle Чем я могу быть вам полезна           
+                // блок для отступов
+                .about__right-desc.text-block    
+                    p Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                .about__right-content.container
+                    ul.skills-list
+                        -
+                            var skills = [
+                                ['Frontend', ['HTML5', '70'], ['CSS3', '70'], ['JavaScript & jQuery', '45'] ],
+                                ['Backend', ['PHP', '30'], ['mySQL', '30'], ['Node.js & npm', '45'], ['Mongo.db', '35'] ], 
+                                ["Workflow", ['Git', '75'], ['Gulp', '60'], ['Webpack', '50'], ['Bower', '50'] ]
+                            ]
+
+                        each item in skills
+                            li.skills-list__item
+                                .skills-row
+                                    .skills-row__title #{item[0]}
+                                    ul.skills-row__list 
+                                        //-на этом блоке отступы                                          
+                                        li.skills-row__item
+                                            .skill
+                                                svg.skill__circle
+                                                .skill__title #{item[1,1]}
+        section.section.map 
+            .google-map
+            .map__data  
                 .contacts
-                    .map                    
-                    .contacts__block
-                        h2.contacts__title Контакты
-                        ul.contacts__list
-                            li.contacts__item
-                                .contacts__icon
-                                    img.contacts__icon-pic(src="./assets/images/icons/skype.svg", alt="skype")
-                                p mary.mary.-_-
-                            li.contacts__item
-                                .contacts__icon
-                                        img.contacts__icon-pic(src="./assets/images/icons/envelope2.svg", alt="email")
-                                p bangtta@yandex.ru
-                            li.contacts__item
-                                .contacts__icon
-                                    img.contacts__icon-pic(src="./assets/images/icons/phone2.svg", alt="phone")
-                                p 8-888-888-88-61
-                            li.contacts__item
-                                .contacts__icon
-                                    img.contacts__icon-pic(src="./assets/images/icons/map_marker.svg", alt="address")
-                                p Москва, ул. Охотный ряд, д. 1
-        include ../common/footer.pug
+                    .contacts__title
+                        .block-subtitle Контакты
+                    ul.contacts__list   
+                        -
+                            var contacts = [
+                                ['skype', 'mary.mary.-_-'], 
+                                ['envelope2', 'bangtta@yandex.ru'],
+                                ['phone2', '8-888-888-88-61'],
+                                ['map_marker', 'Москва, Тверская, 15']
+                            ]
+                            
+                        each item in contacts 
+                            li.contacts__item.contacts-row
+                                // второй блок для отступа между иконкой и текстом
+                                .contacts-row__icon
+                                    img(src=`./assets/images/icons/${item[0]}.svg` alt=`${item[0]}`).contacts-row__pic
+                                .contacts-row__title #{item[1]}
+    include ../common/footer.pug                 
