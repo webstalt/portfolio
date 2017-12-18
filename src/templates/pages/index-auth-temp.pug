@@ -5,7 +5,7 @@ block variables
 
 block content
     section.section.index        
-        form(action="" method="post").form
+        form(action="form" method="post").form
             .form__block                                            
                 h2.block-subtitle Авторизуйтесь
                 .form__row
@@ -31,6 +31,7 @@ block content
                             span.form__input-inner
                         span.form__label-text Не уверен
                 .form__row
-                    button.button.form__btn-main(type="button") На главную
+                    a.form__btn-main(href="https://miabangtta.github.io/portfolio-build/index.html")
+                        button.button(type="button") На главную
                     button.button.form__btn-enter(type="submit") Войти
     .index__copyright © Мария Миронова | Создано с любовью в LoftSchool | 2017-2018

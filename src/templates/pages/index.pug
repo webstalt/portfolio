@@ -5,13 +5,16 @@ block variables
 
 block content
     section.section.index
-        .index__auth 
+        a.index__auth(href="https://miabangtta.github.io/portfolio-build/index-auth-temp.html")
             button.button(type="button").button_transparent Авторизоваться
         .index__block
             include ../common/user.pug
             include ../common/socials.pug            
             .index__btns
-                button.button.index__btn-works(type="button" href="/my-works.html") Мои работы
-                button.button.index__btn-about(type="button" href="/about.html") Обо мне
-                button.button.index__btn-blog(type="button" href="/blog.html") Блог        
+                a.index__btn-works(href="https://miabangtta.github.io/portfolio-build/my-works.html")
+                    button.button(type="button") Мои работы
+                a.index__btn-about(href="https://miabangtta.github.io/portfolio-build/about.html")
+                    button.button(type="button") Обо мне
+                a.index__btn-blog(href="https://miabangtta.github.io/portfolio-build/blog.html")
+                    button.button(type="button") Блог        
     .index__copyright © Мария Миронова | Создано с любовью в LoftSchool | 2017-2018

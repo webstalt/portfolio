@@ -6,22 +6,26 @@ block variables
 block content
     .wrapper
         include ../common/hero.pug
-        section.section
-            svg.triangle.triangle_fill_white.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none")
-                polygon(points="0,0   0,86   500,86   500,75.5 1000,0   1000,86   500,86   500,75.5")                
-            .block-title Мои работы
+        svg.triangle.triangle_fill_white.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none")
+                polygon(points="0,0   0,86   500,86   500,75.5 1000,0   1000,86   500,86   500,75.5")      
+        section.section                      
+            .section-title
+                .block-title Мои работы
+                img.title-img(src="./assets/images/icons/works_header.svg" alt=" ")
             .works.container                
                 .works__demos
                     .works__name
                         .block-subtitle Сайт авиакомпании
                         .works__tech Html, css, javascript
-                        button.button.button-show 
-                            // или модификатор?
-                            img.button-show__icon(src="./assets/images/icons/link.svg", alt="link")
-                            .button-show__text Посмотреть сайт
+                        a.works__show(href="#")
+                            button.button.works__button
+                                img.works__button-icon(src="./assets/images/icons/link.svg", alt="link")
+                                .works__button-text Посмотреть сайт
                     .works__images
                         include ../common/slider.pug
-        .block-title Что обо мне говорят
+        .section-title
+                .block-title Что обо мне говорят
+                img.title-img(src="./assets/images/icons/about_header.svg" alt=" ")
         section.section.reviews            
             .container
                 ul.reviews__list

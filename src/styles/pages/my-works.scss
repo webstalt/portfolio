@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+.title-works {
+    background-image: url('./assets/images/icons/works_header.svg');
+}
+
 .works__demos {
     display: flex;
     flex-direction: row;
@@ -12,18 +16,18 @@
     width: 50%;
 }
 
-.button-show {
-    border-radius: 20px;
+.works__button {
     padding: 0 15px;
     display: flex;
     align-items: center;
+    border-radius: 20px;
 }
 
-.button-show__icon {
+.works__button-icon {
     margin-right: 10px;
 }
 
-.button-show__text {
+.works__button-text {
     display: inline-flex;
 }
 

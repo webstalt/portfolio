@@ -46,8 +46,9 @@
     flex-direction: row;
     width: 100%;
     
-    & button {
-        flex-grow: 1;
+    & a {
+        display: inline-flex;
+        // flex-grow: 1;
         width: 33.3%;    
     }
 }
@@ -57,9 +58,9 @@
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    & button {
+    & a, button {
         flex-grow: 1;
-        width: 50%;
+        // width: 50%;
     }
 }
 
