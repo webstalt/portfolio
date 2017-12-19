@@ -1,0 +1,15 @@
+.triangle {
+    &_up {
+        transform: translateY(-100%);
+        width: 100%;
+        position: absolute; 
+  }
+    &_fill {
+        &_white {
+            fill: #f4f5f0;
+        }
+        &_beige {
+            fill: #ebefe2;
+        }
+    }
+}

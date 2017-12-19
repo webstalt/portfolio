@@ -11,14 +11,15 @@ block content
                 .about__triangle.about__triangle_left
                     svg.triangle.triangle_fill_beige.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none")
                         polygon(points="0,0   0,86   500.8,86   500.8,75.5")                     
-                // абсолютом треугольники отрицательным топом 
-                .about__left-content.container 
-                    .block-title.about__title Обо мне
+                .about__left-content.container
+                    .section-title 
+                        .block-title Обо мне
+                        .title-after.title-about
                     .user-desc
                         .user-desc__avatar
                             img.user-desc__pic(src="./assets/images/content/avatar.jpg", alt="avatar")
                         .user-desc__title
-                            .block-subtitle.block-subtitle_centered Кто я
+                            .block-subtitle Кто я
                         .user-desc__text.text-block
                             p Я веб разработчик из Москвы. Мне 22 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                             p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
@@ -26,35 +27,87 @@ block content
                 .about__triangle.about__triangle_right
                     svg.triangle.triangle_fill_white.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none")
                         polygon(points="500,0   500,86   0,86   0,75.5")
-                .about__right-title.block-subtitle Чем я могу быть вам полезна           
-                // блок для отступов
-                .about__right-desc.text-block    
+                .about__right-title.block-subtitle 
+                    | Чем я могу быть 
+                    |
+                    | вам полезна      
+                .about__right-desc.container.text-block    
                     p Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
                 .about__right-content.container
                     ul.skills-list
                         -
-                            var skills = [
-                                ['Frontend', ['HTML5', '70'], ['CSS3', '70'], ['JavaScript & jQuery', '45'] ],
-                                ['Backend', ['PHP', '30'], ['mySQL', '30'], ['Node.js & npm', '45'], ['Mongo.db', '35'] ], 
-                                ["Workflow", ['Git', '75'], ['Gulp', '60'], ['Webpack', '50'], ['Bower', '50'] ]
-                            ]
-
+                           var skills = [
+                                {
+                                    skill: "Frontend",
+                                    tech1: [
+                                        {
+                                            name: 'HTML5',
+                                            percent: '70'
+                                        }, {
+                                            name: 'CSS3',
+                                            percent: '70'
+                                        }, {
+                                            name: 'JavaScript & jQuery',
+                                            percent: '45'
+                                        } ]
+                                },{                                           
+                                    skill: "Backend",
+                                    tech2: [
+                                        {
+                                            name: 'PHP',
+                                            percent: '30'
+                                        }, {
+                                            name: 'mySQL',
+                                            percent: '40'
+                                        }, {
+                                            name: 'Node.js & npm',
+                                            percent: '45'
+                                        }, {
+                                            name: 'Mongo.db',
+                                            percent: '35'
+                                        } ]
+                                },{                                           
+                                    skill: "Workflow",
+                                    tech3: [
+                                        {
+                                            name: 'Git',
+                                            percent: '70'
+                                        },{
+                                            name: 'Gulp',
+                                            percent: '60'
+                                        },{
+                                            name: 'Webpack',
+                                            percent: '50'
+                                        },{
+                                            name: 'Bower',
+                                            percent: '60'
+                                        }] 
+                                }]    
                         each item in skills
-                            li.skills-list__item
-                                .skills-row
-                                    .skills-row__title #{item[0]}
-                                    ul.skills-row__list 
-                                        //-на этом блоке отступы                                          
-                                        li.skills-row__item
-                                            .skill
-                                                svg.skill__circle
-                                                .skill__title #{item[1,1]}
+                            li.skills-list__item.skills-row
+                                .skills-row__title #{item['skill']}
+                                ul.skills-row__list                                       
+                                    //- svg.skill__circle
+                                    if item['skill'] == 'Frontend'
+                                        each word in item['tech1'] 
+                                            li.skills-row__item.skill 
+                                                .skill__title #{word['name']} 
+                                                .skill__percent #{word['percent']}
+                                    else if item['skill'] == 'Backend'
+                                        each word in item['tech2'] 
+                                            li.skills-row__item.skill
+                                                .skill__title #{word['name']} 
+                                                .skill__percent #{word['percent']}
+                                    else if item['skill'] == 'Workflow'
+                                        each word in item['tech3'] 
+                                            li.skills-row__item.skill
+                                                .skill__title #{word['name']} 
+                                                .skill__percent #{word['percent']}
         section.section.map 
             .google-map
             .map__data  
                 .contacts
-                    .contacts__title
-                        .block-subtitle Контакты
+                    .block-subtitle.contacts__subtitle Контакты
                     ul.contacts__list   
                         -
                             var contacts = [
@@ -62,8 +115,7 @@ block content
                                 ['envelope2', 'bangtta@yandex.ru'],
                                 ['phone2', '8-888-888-88-61'],
                                 ['map_marker', 'Москва, Тверская, 15']
-                            ]
-                            
+                            ]                            
                         each item in contacts 
                             li.contacts__item.contacts-row
                                 // второй блок для отступа между иконкой и текстом

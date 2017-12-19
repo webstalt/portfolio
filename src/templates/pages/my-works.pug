@@ -7,7 +7,7 @@ block content
     .wrapper
         include ../common/hero.pug
         svg.triangle.triangle_fill_white.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none")
-                polygon(points="0,0   0,86   500,86   500,75.5 1000,0   1000,86   500,86   500,75.5")      
+            polygon(points="0,0   0,86   500,86   500,75.5 1000,0   1000,86   500,86   500,75.5")      
         section.section                      
             .section-title
                 .block-title Мои работы
@@ -18,14 +18,14 @@ block content
                         .block-subtitle Сайт авиакомпании
                         .works__tech Html, css, javascript
                         a.works__show(href="#")
-                            button.button.works__button
+                            button(type="button").button.works__button
                                 img.works__button-icon(src="./assets/images/icons/link.svg", alt="link")
                                 .works__button-text Посмотреть сайт
                     .works__images
                         include ../common/slider.pug
         .section-title
-                .block-title Что обо мне говорят
-                img.title-img(src="./assets/images/icons/about_header.svg" alt=" ")
+            .block-title Что обо мне говорят
+            img.title-img(src="./assets/images/icons/about_header.svg" alt=" ")
         section.section.reviews            
             .container
                 ul.reviews__list
@@ -42,13 +42,12 @@ block content
                         .reviews__author Сабанцев Владимир
                         .reviews__occ преподаватель
             .message
-                .message__block
-                    .block-subtitle Связаться со мной
-                    form.message__form(action="")
-                        input.message__name(placeholder="Имя")
-                        input.message__email(placeholder="Email")
-                        input.message__content(placeholder="Ваше сообщение")
-                        .message__buttons
-                            button.button.message__send Отправить
-                            button.button.message__clear Очистить                  
+                .block-subtitle Связаться со мной
+                form.message__form(action="")
+                    input.message__name(placeholder="Имя")
+                    input.message__email(placeholder="Email")
+                    input.message__content(placeholder="Ваше сообщение")
+                    .message__buttons
+                        button(type="submit").button.message__send Отправить
+                        button(type="reset").button.message__clear Очистить                  
     include ../common/footer.pug

@@ -10,8 +10,10 @@
     border-radius: 50%;
     margin-bottom: 30px;
     overflow: hidden;
-    background-position: 45% 15%; /* Положение фона */
-    background-repeat: no-repeat;     
+}
+
+.user__pic-img {
+    max-width: 200%;
 }
 
 .user__info {

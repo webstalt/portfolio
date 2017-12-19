@@ -1,10 +1,8 @@
 .footer {
-    // position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
-    // bottom: -190px;
     height: 190px;
 }
 
@@ -18,16 +16,11 @@
 .footer__row-top {
     height: 150px;
     background-color: rgba(55,62,66,0.85);
+    padding: 30px;
 }
 
 .footer__col {
     width: 33%;
-    margin-top: 30px;
-}
-
-.footer__about {
-    margin-left: 30px;
-    opacity: .5;
 }
 
 .footer__nav {
@@ -38,16 +31,6 @@
 
 .footer__menu {
     margin-bottom: 10px;
-}
-
-.footer__quote {
-    margin-right: 30px;
-    font-family: 'Roboto-Italic';
-    opacity: .5;
-}
-
-.footer__quote-author {
-    font-family: 'Roboto-BoldItalic';
 }
 
 .footer__copyright {

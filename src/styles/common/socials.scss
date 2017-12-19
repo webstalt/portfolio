@@ -10,4 +10,8 @@
 .socials__pic {
     width: 25px;
     height: 25px;
+    fill: #fff;
+    &:hover {
+        fill: $fresh;
+    }
 }

@@ -29,7 +29,7 @@
         <div class="hero__user">
           <div class="user"> 
             <!-- класс user формирует отображение, класс перед ним - для позиционирования-->
-            <div class="user__pic" style="background-image:url(./assets/images/content/avatar.jpg);"><img class="user__pic-img visuallyhidden" src="./assets/images/content/avatar.jpg" alt="avatar"/></div>
+            <div class="user__pic"><img class="user__pic-img" src="./assets/images/content/avatar1.jpg" alt="avatar"/></div>
             <div class="user__info">
               <div class="user__name">Мария Миронова</div>
               <div class="user__data">Личный сайт веб-разработчика</div>
@@ -45,13 +45,15 @@
               <polygon points="0,0   0,86   500.8,86   500.8,75.5">                    </polygon>
             </svg>
           </div>
-          <!-- абсолютом треугольники отрицательным топом -->
-          <div class="about__left-content container"> 
-            <div class="block-title about__title">Обо мне</div>
+          <div class="about__left-content container">
+            <div class="section-title"> 
+              <div class="block-title">Обо мне</div>
+              <div class="title-after title-about"></div>
+            </div>
             <div class="user-desc">
               <div class="user-desc__avatar"><img class="user-desc__pic" src="./assets/images/content/avatar.jpg" alt="avatar"/></div>
               <div class="user-desc__title">
-                <div class="block-subtitle block-subtitle_centered">Кто я</div>
+                <div class="block-subtitle">Кто я</div>
               </div>
               <div class="user-desc__text text-block">
                 <p>Я веб разработчик из Москвы. Мне 22 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
@@ -66,51 +68,74 @@
               <polygon points="500,0   500,86   0,86   0,75.5"></polygon>
             </svg>
           </div>
-          <div class="about__right-title block-subtitle">Чем я могу быть вам полезна           </div>
-          <!-- блок для отступов-->
-          <div class="about__right-desc text-block">   
+          <div class="about__right-title block-subtitle">
+             Чем я могу быть 
+            
+            вам полезна      
+          </div>
+          <div class="about__right-desc container text-block">   
             <p>Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
           </div>
           <div class="about__right-content container">
             <ul class="skills-list">
-              <li class="skills-list__item">
-                <div class="skills-row">
-                  <div class="skills-row__title">Frontend</div>
-                  <ul class="skills-row__list"> 
-                    <li class="skills-row__item">
-                      <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">HTML5,70</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+              <li class="skills-list__item skills-row">
+                <div class="skills-row__title">Frontend</div>
+                <ul class="skills-row__list">                                      
+                  <li class="skills-row__item skill"> 
+                    <div class="skill__title">HTML5 </div>
+                    <div class="skill__percent">70</div>
+                  </li>
+                  <li class="skills-row__item skill"> 
+                    <div class="skill__title">CSS3 </div>
+                    <div class="skill__percent">70</div>
+                  </li>
+                  <li class="skills-row__item skill"> 
+                    <div class="skill__title">JavaScript &amp; jQuery </div>
+                    <div class="skill__percent">45</div>
+                  </li>
+                </ul>
               </li>
-              <li class="skills-list__item">
-                <div class="skills-row">
-                  <div class="skills-row__title">Backend</div>
-                  <ul class="skills-row__list"> 
-                    <li class="skills-row__item">
-                      <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">PHP,30</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+              <li class="skills-list__item skills-row">
+                <div class="skills-row__title">Backend</div>
+                <ul class="skills-row__list">                                      
+                  <li class="skills-row__item skill">
+                    <div class="skill__title">PHP </div>
+                    <div class="skill__percent">30</div>
+                  </li>
+                  <li class="skills-row__item skill">
+                    <div class="skill__title">mySQL </div>
+                    <div class="skill__percent">40</div>
+                  </li>
+                  <li class="skills-row__item skill">
+                    <div class="skill__title">Node.js &amp; npm </div>
+                    <div class="skill__percent">45</div>
+                  </li>
+                  <li class="skills-row__item skill">
+                    <div class="skill__title">Mongo.db </div>
+                    <div class="skill__percent">35</div>
+                  </li>
+                </ul>
               </li>
-              <li class="skills-list__item">
-                <div class="skills-row">
-                  <div class="skills-row__title">Workflow</div>
-                  <ul class="skills-row__list"> 
-                    <li class="skills-row__item">
-                      <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">Git,75</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+              <li class="skills-list__item skills-row">
+                <div class="skills-row__title">Workflow</div>
+                <ul class="skills-row__list">                                      
+                  <li class="skills-row__item skill">
+                    <div class="skill__title">Git </div>
+                    <div class="skill__percent">70</div>
+                  </li>
+                  <li class="skills-row__item skill">
+                    <div class="skill__title">Gulp </div>
+                    <div class="skill__percent">60</div>
+                  </li>
+                  <li class="skills-row__item skill">
+                    <div class="skill__title">Webpack </div>
+                    <div class="skill__percent">50</div>
+                  </li>
+                  <li class="skills-row__item skill">
+                    <div class="skill__title">Bower </div>
+                    <div class="skill__percent">60</div>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -120,9 +145,7 @@
         <div class="google-map"></div>
         <div class="map__data"> 
           <div class="contacts">
-            <div class="contacts__title">
-              <div class="block-subtitle">Контакты</div>
-            </div>
+            <div class="block-subtitle contacts__subtitle">Контакты</div>
             <ul class="contacts__list">  
               <li class="contacts__item contacts-row">
                 <!-- второй блок для отступа между иконкой и текстом-->
@@ -151,7 +174,7 @@
     </div>
     <footer class="footer"> 
       <div class="footer__row footer__row-top">
-        <div class="footer__col footer__about">Этот сайт сделан в рамках обучения в Школе онлайн образования LoftSchool. </div>
+        <div class="footer__col opacity_05">Этот сайт сделан в рамках обучения в Школе онлайн образования LoftSchool. </div>
         <div class="footer__col footer__nav">
           <nav class="menu footer__menu">
             <ul class="menu__list"> 
@@ -170,8 +193,8 @@
             <li class="socials__item"><a class="socials__link" href="in,linkedin.com" target="_blank"><img class="socials__pic" src="./assets/images/icons/in.svg" alt="in"/></a></li>
           </ul>
         </div>
-        <div class="footer__col footer__quote">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
-          <div class="footer__quote-author">— Martin Golding</div>
+        <div class="footer__col text_font-family_italic opacity_05">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+          <div class="text_font-family_bold-italic">— Martin Golding</div>
         </div>
       </div>
       <div class="footer__row footer__copyright">© Мария Миронова | Создано с любовью в LoftSchool | 2017-2018</div>
