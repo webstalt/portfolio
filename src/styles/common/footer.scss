@@ -11,24 +11,37 @@
     flex-direction: row;
     color: #fff;
     font-size: 15px;
+
 }
 
 .footer__row-top {
     min-height: 150px;
     background-color: rgba(55,62,66,0.85);
     padding: 30px;
+
+    @include tablets {
+        display: inline-block;
+
+    }
 }
 
 .footer__col {
     width: 33%;
     @include tablets {
-        width: 50%;
+        width: 47%;
+        display: inline-flex;
+
+        &:not(:last-child) {
+            border-left: 1px solid rgba(#fff, 0.5);
+            margin-bottom: 30px;
+        }
     }
 
     &_third {
         width: 33%;
         @include tablets {
             width: 100%;
+            display: block;
         }
     }
 }
@@ -39,6 +52,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablets {
+        display: inline-flex;
+    }
 }
 
 .footer__menu {

@@ -1,6 +1,9 @@
 .socials__list {
     display: flex;
     flex-direction: row;
+    @include tablets {
+        flex-wrap: wrap;
+    }
 }
 
 .socials__item {

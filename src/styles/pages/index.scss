@@ -46,9 +46,22 @@
     font-size: 16px;
 }
 
+// section form
+
 .form {
+    .index__btns {
+        display: flex;
+        height: 48px;
+        a {
+            white-space: nowrap;
+            line-height: 1;
+        }
+    }
+
     .index__btn {
+        flex: 1;
         padding: 15px 50px;
+        line-height: 1;
     }
 }
 

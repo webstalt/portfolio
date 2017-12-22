@@ -34,6 +34,14 @@
     flex-direction: row;
     & .section-title {
         width: 50%;
+
+        @include medium {
+            width: 100%;
+        }
+    }
+
+    @include tablets {
+        flex-direction: column;
     }
 }
 
@@ -54,6 +62,7 @@
 .user-desc__avatar {
     height: 40%;
     overflow: hidden;
+    text-align: center;
 }
 
 .user-desc__title {
@@ -81,6 +90,9 @@
 .skills-row__title {
     margin-bottom: 20px;
     font-size: 28px;
+    @include tablets {
+        text-align: center;
+    } 
 }
 .skills-row__item {
     margin-right: 40px;

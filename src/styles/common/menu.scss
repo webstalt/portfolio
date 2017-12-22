@@ -36,13 +36,14 @@
     .menu__list {    
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;        
+        flex-wrap: wrap;  
+        justify-content: center;      
     }
 
     .menu__link {
         white-space: nowrap;
         // font-family: "Roboto-Bold", Arial, sans-serif;
-        margin-left: 40px;
+        margin-right: 40px;
         color: #fff;
         text-decoration: none;
         &:hover {
