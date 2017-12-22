@@ -8,25 +8,30 @@ block content
         include ../common/hero.pug
         svg.triangle.triangle_fill_white.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none")
             polygon(points="0,0   0,86   500,86   500,75.5 1000,0   1000,86   500,86   500,75.5")      
-        section.section                      
-            .section-title
-                .block-title Мои работы
-                img.title-img(src="./assets/images/icons/works_header.svg" alt=" ")
-            .works.container                
-                .works__demos
-                    .works__name
-                        .block-subtitle Сайт авиакомпании
-                        .works__tech Html, css, javascript
-                        a.works__show(href="#")
-                            button(type="button").button.works__button
-                                img.works__button-icon(src="./assets/images/icons/link.svg", alt="link")
-                                .works__button-text Посмотреть сайт
-                    .works__images
-                        include ../common/slider.pug
         .section-title
-            .block-title Что обо мне говорят
-            img.title-img(src="./assets/images/icons/about_header.svg" alt=" ")
-        section.section.reviews            
+                .block-title Мои работы
+                .title-after.title-works
+        section.section.slider
+            .slider__info
+                .block-subtitle Сайт авиакомпании
+                .slider__desc Html, css, javascript
+                a.slider__link(href="#")
+                    button(type="button").button.slider__link-btn
+                        img.slider__link-pic(src="./assets/images/icons/link.svg", alt="link")
+                        .slider__link-text Посмотреть сайт
+            .slider__display картинки
+            .slider__btns 
+                a.slider__btn.slider__btn_down
+                    img(src="", alt="").slider__img
+                    img(src="./assets/images/icons/arrow_down.svg").slider__arrow.slider__arrow_next
+                a.slider__btn.slider__btn_up
+                    img(src="", alt="").slider__img
+                    img(src="./assets/images/icons/arrow_down.svg").slider__arrow.slider__arrow_prev
+        .section-title
+            .block-title Что обо мне 
+                | говорят
+            .title-after.title-about
+        section.reviews            
             .container
                 ul.reviews__list
                     li.reviews__item
@@ -42,12 +47,13 @@ block content
                         .reviews__author Сабанцев Владимир
                         .reviews__occ преподаватель
             .message
-                .block-subtitle Связаться со мной
-                form.message__form(action="")
-                    input.message__name(placeholder="Имя")
-                    input.message__email(placeholder="Email")
-                    input.message__content(placeholder="Ваше сообщение")
-                    .message__buttons
-                        button(type="submit").button.message__send Отправить
-                        button(type="reset").button.message__clear Очистить                  
+                form(action="form" method="post")
+                    .message__form
+                        .block-subtitle Связаться со мной
+                        input.message__name(placeholder="Имя")
+                        input.message__email(placeholder="Email")
+                        textarea.message__content(placeholder="Ваше сообщение")
+                        .message__buttons
+                            button(type="submit").button Отправить
+                            button(type="reset").button Очистить                  
     include ../common/footer.pug

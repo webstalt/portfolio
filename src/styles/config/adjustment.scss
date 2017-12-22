@@ -3,15 +3,24 @@
     margin-left: 40px;
 }
 
-.text_font-family_bold {
+.margin_bottom {
+    &_10 {
+        margin-bottom: 10px;
+    }
+    &_40 {
+        margin-bottom: 40px;    
+    }
+}
+
+.text_bold {
     font-family: 'Roboto-Bold';
 }
 
-.text_font-family_italic {
+.text_italic {
     font-family: 'Roboto-Italic';
 }
 
-.text_font-family_bold-italic {
+.text_bold-italic {
     font-family: 'Roboto-BoldItalic';
 }
 

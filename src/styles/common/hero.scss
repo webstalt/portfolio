@@ -6,6 +6,10 @@
     padding: 30px;
 }
 
+.hero__socials {
+    position: absolute;
+}
+
 .hero__menu {
     position: absolute;
     top: 30px;
@@ -17,12 +21,12 @@
     width: 40px;
 }
 
-.hero__user {    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.hero__user {
+    position: absolute;
     text-align: center;
-    transform: translateY(50%);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .arrow-down {

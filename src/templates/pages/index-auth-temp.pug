@@ -9,7 +9,7 @@ block content
             .form__block                                            
                 .block-subtitle Авторизуйтесь
                 .form__row
-                    input(name="login" id="login" placeholder="Логин").form__input.form__input-text
+                    input(name="login" id="login" placeholder="Логин").form__input.form__input-text.form__input_login
                 .form__row
                     input(name="password" id="password" placeholder="Пароль").form__input.form__input-text
                 .form__row
@@ -18,8 +18,8 @@ block content
                         span.form__input-square
                             span.form__input-check
                         span.form__label-text Я человек
-                .form__row Вы точно не робот?
-                .form__row
+                .margin_bottom_10 Вы точно не робот?
+                .form__row.margin_bottom_40
                     label(for="notarobot").form__label
                         input(type="radio" id="notarobot" name="robot").form__input.form__input-radio 
                         span.form__input-circle
@@ -30,7 +30,7 @@ block content
                         span.form__input-circle
                             span.form__input-inner
                         span.form__label-text Не уверен
-                .form__row
-                    a(href="https://miabangtta.github.io/portfolio-build/index.html").button На главную
-                    button.button(type="submit") Войти
+                .index__btns
+                    a.index__btn(href="https://miabangtta.github.io/portfolio-build/index.html").button На главную
+                    button.index__btn.button(type="submit") Войти
     .index__copyright © Мария Миронова | Создано с любовью в LoftSchool | 2017-2018
