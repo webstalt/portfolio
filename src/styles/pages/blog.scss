@@ -10,7 +10,7 @@
 
 .blog__sidebar {
     width: 25%;
-    margin-right: 5%;
+    margin-right: 10%;
 }
 
 .blog__headings-list {
@@ -21,12 +21,18 @@
 
 .blog__headings-link {
     font-size: 16px;
+    height: 40px;
     line-height: 40px;
+    display: inline-block;
     color: $dark;
     padding-right: 15px;
+    border-right: 2px solid transparent;
+    margin-bottom: 20px;
 
     &:hover {
-        text-decoration: underline;
+        font-family: "Roboto-Bold", Arial, sans-serif;
+        color: $fresh;
+        border-right: 2px solid $fresh;
     }
 }
 

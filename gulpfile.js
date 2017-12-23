@@ -6,7 +6,6 @@ const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
-const spritesmith = require('gulp.spritesmith');
 
 const del = require('del');
 
@@ -33,10 +32,6 @@ const paths = {
         src: 'src/images/**/*.*',
         dest: 'build/assets/images/'
     },
-    // sprites: {
-    //     src: 'src/images/icons/*.svg',
-    //     dest: 'build/assets/images/'
-    // },
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
@@ -111,16 +106,6 @@ function images() {
         .pipe(gulp.dest(paths.images.dest));
 }
 
-// генерируем спрайты
-// function sprites() {
-//     return gulp.src('paths.sprites.src')
-//         .pipe(spritesmith({
-//         imgName: 'sprite.svg',
-//         cssName: 'sprite.css'
-//         }))
-//         .pipe(gulp.dest('paths.sprites.dest'));
-//   });
-
 function fonts() {
     return gulp.src(paths.fonts.src)
         .pipe(gulp.dest(paths.fonts.dest));
@@ -131,7 +116,7 @@ exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
 exports.scripts = scripts;
-exports.fonts = fonts; // что мы экспортируем в этих строках?
+exports.fonts = fonts;
 
 gulp.task('default', gulp.series(
     clean,
