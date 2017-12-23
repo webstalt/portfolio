@@ -7,10 +7,9 @@
     <meta content="" name="description"/>
     <meta content="" name="keywords"/>
     <title>Обо мне</title>
-    <link rel="stylesheet" href="assets/styles/app.min.css"/>
-    <link rel="icon" type="image/png" href="/assets/images/content/fav_forest.png" sizes="16x16"/>
-    <script src="assets/scripts.bundle.js" defer="defer"></script>
-    <script src="assets/scripts/svg4everybody.js"></script>
+    <link rel="stylesheet" href="./assets/styles/app.min.css"/>
+    <link rel="icon" type="image/png" href="assets/images/content/fav_forest.png" sizes="16x16"/>
+    <script src="./assets/scripts/bundle.js" defer="defer"></script>
   </head>
   <body>
     <div class="wrapper">   
@@ -142,7 +141,7 @@
         </div>
       </section>
       <section class="section map"> 
-        <div class="google-map"></div>
+        <div class="google-map" id="mapkit-8431"></div>
         <div class="map__data"> 
           <div class="contacts">
             <div class="block-subtitle contacts__subtitle">Контакты</div>
@@ -165,7 +164,7 @@
               <li class="contacts__item contacts-row">
                 <!-- второй блок для отступа между иконкой и текстом-->
                 <div class="contacts-row__icon"><img class="contacts-row__pic" src="./assets/images/icons/map_marker.svg" alt="map_marker"/></div>
-                <div class="contacts-row__title">Москва, Тверская, 15</div>
+                <div class="contacts-row__title">Москва, Мясницкая, 9</div>
               </li>
             </ul>
           </div>
@@ -200,5 +199,9 @@
       </div>
       <div class="footer__row footer__copyright">© Мария Миронова | Создано с любовью в LoftSchool | 2017-2018</div>
     </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&amp;extension=.js"></script>
+    <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet"/>
+    <link href="https://cdn.mapkit.io/v1/infobox.css" rel="stylesheet"/>
   </body>
 </html>

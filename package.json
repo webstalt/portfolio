@@ -2,10 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Mariya Mironova",
-  "main": "index.js",
+  "main": "bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack src/index.js dist/bundle.js"
+    "build": "webpack src/scripts/app.js build/assets/scripts/bundle.js"
   },
   "repository": {
     "type": "git",

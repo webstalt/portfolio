@@ -104,7 +104,7 @@ block content
                                                 .skill__title #{word['name']} 
                                                 .skill__percent #{word['percent']}
         section.section.map 
-            .google-map
+            .google-map#mapkit-8431
             .map__data  
                 .contacts
                     .block-subtitle.contacts__subtitle Контакты
@@ -114,7 +114,7 @@ block content
                                 ['skype', 'mary.mary.-_-'], 
                                 ['envelope2', 'bangtta@yandex.ru'],
                                 ['phone2', '8-888-888-88-61'],
-                                ['map_marker', 'Москва, Тверская, 15']
+                                ['map_marker', 'Москва, Мясницкая, 9']
                             ]                            
                         each item in contacts 
                             li.contacts__item.contacts-row
@@ -122,4 +122,8 @@ block content
                                 .contacts-row__icon
                                     img(src=`./assets/images/icons/${item[0]}.svg` alt=`${item[0]}`).contacts-row__pic
                                 .contacts-row__title #{item[1]}
-    include ../common/footer.pug                 
+    include ../common/footer.pug
+    script(src="https://maps.googleapis.com/maps/api/js?key=&extension=.js")
+    script(src="https://cdn.mapkit.io/v1/infobox.js")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet")
+    link(href="https://cdn.mapkit.io/v1/infobox.css" rel="stylesheet")

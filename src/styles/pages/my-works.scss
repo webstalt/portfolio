@@ -107,6 +107,10 @@
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 70px;
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .reviews__item {
@@ -117,6 +121,10 @@
     margin-left: 20px;
     @include medium {
         width: 50%;
+    }
+
+    @include phones {
+        width: 100%;
     }
 }
 

@@ -131,7 +131,7 @@ exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
 exports.scripts = scripts;
-exports.fonts = fonts;
+exports.fonts = fonts; // что мы экспортируем в этих строках?
 
 gulp.task('default', gulp.series(
     clean,
