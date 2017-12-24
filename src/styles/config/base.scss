@@ -152,6 +152,7 @@ a {
 input, textarea {
     border-radius: 20px;
     border: 1px solid transparent;
+    font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
     transition: 0.3s;
     &:focus {
         border: 1px solid $light;

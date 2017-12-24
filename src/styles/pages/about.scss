@@ -44,16 +44,17 @@
 .about__left-content {
     display: flex;
     flex-direction: row;
+
+    @include desktop {
+        flex-direction: column;
+    }
+
     & .section-title {
         width: 50%;
 
         @include desktop {
             width: 100%;
         }
-    }
-
-    @include tablets {
-        flex-direction: column;
     }
 }
 
@@ -68,9 +69,6 @@
     width: 50%;
     @include desktop {
         width: 100%;
-    } 
-
-    @include tablets {
         margin-bottom: 40px;
     }
 }
