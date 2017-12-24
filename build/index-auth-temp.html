@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
+    <title>Добро пожаловать</title>
+    <link rel="stylesheet" href="./assets/styles/app.min.css"/>
+    <link rel="icon" type="image/png" href="assets/images/content/fav_forest.png" sizes="16x16"/>
+    <script src="./assets/scripts/bundle.js" defer="defer"></script>
+  </head>
+  <body>
+    <section class="section index">       
+      <form class="form" action="form" method="post">
+        <div class="form__block">                                           
+          <div class="block-subtitle">Авторизуйтесь                </div>
+          <div class="form__row">
+            <label class="form__label-img" for="login">
+              <svg class="form__label-icon">
+                <use xlink:href="assets/images/icons/sprite.svg#login"></use>
+              </svg>
+            </label>
+            <input class="form__input form__input-text form__input_round-right" name="login" id="login" placeholder="Логин"/>
+          </div>
+          <div class="form__row">
+            <label class="form__label-img" for="password">
+              <svg class="form__label-icon">
+                <use xlink:href="assets/images/icons/sprite.svg#password"></use>
+              </svg>
+            </label>
+            <input class="form__input form__input-text form__input_round-right" name="password" id="password" placeholder="Пароль"/>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="imahuman">
+              <input class="form__input-checkbox" type="checkbox" id="imahuman" name="human"/><span class="form__input-square"><span class="form__input-check"></span></span><span class="form__label-text">Я человек</span>
+            </label>
+          </div>
+          <div class="margin_bottom_10">Вы точно не робот?</div>
+          <div class="form__row margin_bottom_40">
+            <label class="form__label" for="notarobot">
+              <input class="form__input form__input-radio" type="radio" id="notarobot" name="robot"/><span class="form__input-circle"><span class="form__input-inner"></span></span><span class="form__label-text">Да</span>
+            </label>
+            <label class="form__label margin_left_40" for="mayberobot">
+              <input class="form__input form__input-radio" type="radio" id="mayberobot" name="robot"/><span class="form__input-circle"><span class="form__input-inner"></span></span><span class="form__label-text">Не уверен</span>
+            </label>
+          </div>
+          <div class="index__btns"><a class="button" href="https://miabangtta.github.io/portfolio-build/index.html">На главную</a>
+            <button class="index__btn button" type="submit">Войти</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <div class="index__copyright">© Мария Миронова | Создано с любовью в LoftSchool | 2017-2018</div>
+  </body>
+</html>

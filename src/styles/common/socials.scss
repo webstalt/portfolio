@@ -6,8 +6,8 @@
     }
 }
 
-.socials__item {
-    margin-right: 20px;
+.socials__link {
+    padding: 10px;
 }
 
 .socials__pic {
@@ -15,7 +15,20 @@
     height: 25px;
     fill: #fff;
     transition: .3s;
+    
     &:hover {
         fill: $fresh;
+    }
+}
+
+.socials__rounded {
+    .socials__pic {
+        opacity: 0.5;
+        
+        
+        &:hover {
+            fill: #fff;
+            opacity: 1;
+        }
     }
 }
