@@ -35,13 +35,19 @@
     }
 }
 
+.about__triangle_left, .about__triangle_right {
+    @include tablets {
+        display: none;
+    }
+}
+
 .about__left-content {
     display: flex;
     flex-direction: row;
     & .section-title {
         width: 50%;
 
-        @include medium {
+        @include desktop {
             width: 100%;
         }
     }
@@ -60,9 +66,13 @@
 .user-desc {
     display: block;
     width: 50%;
-    @include medium {
+    @include desktop {
         width: 100%;
     } 
+
+    @include tablets {
+        margin-bottom: 40px;
+    }
 }
 
 .user-desc__avatar {
@@ -100,10 +110,22 @@
         text-align: center;
     } 
 }
+
 .skills-row__item {
-    margin-right: 40px;
     color: $fresh;
     font-family: 'Roboto-Bold';
+
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+.skill__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .map {    

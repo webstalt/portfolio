@@ -5,8 +5,8 @@
   background-color: $color;
 }
 
-@mixin medium {
-    @media screen and (max-width: $medium) {
+@mixin desktop {
+    @media screen and (max-width: $desktop) {
       @content;
     }
   }

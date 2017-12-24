@@ -1,6 +1,10 @@
 .blog {
     display: flex;
     flex-direction: row;
+
+    @include tablets {
+        position: relative;
+    }
 }
 
 .title-blog {
@@ -9,8 +13,23 @@
 }
 
 .blog__sidebar {
-    width: 25%;
-    margin-right: 10%;
+    width: 30%;
+    margin-right: 7%;
+
+    // @include tablets {
+    //     width: 100%;
+    //     position: absolute;
+    //     left: -800px;
+    //     height: 100%;
+    //     background-color: $fresh;
+    //     &:after {
+    //         @include circle(15px, $fresh);
+    //         left: -50%;
+    //         top: 50%;
+    //         position: absolute;
+    //         transform: translateY(-50%);
+    //     }
+    // }
 }
 
 .blog__headings-list {

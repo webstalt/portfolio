@@ -7,6 +7,8 @@ block content
     .wrapper    
         include ../common/hero.pug
         section.section.about
+            svg.triangle.triangle_fill_beige.triangle_up.triangle_tablets(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none")
+                polygon(points="0,0   0,86   500,86   500,75.5 1000,0   1000,86   500,86   500,75.5")
             .about__left
                 .about__triangle.about__triangle_left
                     svg.triangle.triangle_fill_beige.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none")
@@ -27,10 +29,7 @@ block content
                 .about__triangle.about__triangle_right
                     svg.triangle.triangle_fill_white.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none")
                         polygon(points="500,0   500,86   0,86   0,75.5")
-                .about__right-title.block-subtitle 
-                    | Чем я могу быть 
-                    |
-                    | вам полезна      
+                .about__right-title.block-subtitle Чем я могу быть вам полезна      
                 .about__right-desc.container.text-block    
                     p Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
                 .about__right-content.container
@@ -42,42 +41,42 @@ block content
                                     tech1: [
                                         {
                                             name: 'HTML5',
-                                            percent: '70'
+                                            percent: '85'
                                         }, {
                                             name: 'CSS3',
-                                            percent: '70'
+                                            percent: '80'
                                         }, {
                                             name: 'JavaScript & jQuery',
-                                            percent: '45'
+                                            percent: '70'
                                         } ]
                                 },{                                           
                                     skill: "Backend",
                                     tech2: [
                                         {
                                             name: 'PHP',
-                                            percent: '30'
+                                            percent: '40'
                                         }, {
                                             name: 'mySQL',
-                                            percent: '40'
+                                            percent: '55'
                                         }, {
                                             name: 'Node.js & npm',
                                             percent: '45'
                                         }, {
                                             name: 'Mongo.db',
-                                            percent: '35'
+                                            percent: '65'
                                         } ]
                                 },{                                           
                                     skill: "Workflow",
                                     tech3: [
                                         {
                                             name: 'Git',
-                                            percent: '70'
+                                            percent: '85'
                                         },{
                                             name: 'Gulp',
-                                            percent: '60'
+                                            percent: '80'
                                         },{
                                             name: 'Webpack',
-                                            percent: '50'
+                                            percent: '60'
                                         },{
                                             name: 'Bower',
                                             percent: '60'
@@ -86,23 +85,31 @@ block content
                         each item in skills
                             li.skills-list__item.skills-row
                                 .skills-row__title #{item['skill']}
-                                ul.skills-row__list                                       
-                                    //- svg.skill__circle
+                                ul.skills-row__list      
                                     if item['skill'] == 'Frontend'
                                         each word in item['tech1'] 
-                                            li.skills-row__item.skill 
-                                                .skill__title #{word['name']} 
-                                                .skill__percent #{word['percent']}
+                                            li.skills-row__item                                               
+                                                .circle 
+                                                    .skill__title #{word['name']}  
+                                                    svg.circles(viewBox='0 0 110 110')
+                                                        circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                                                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second circle-${word['percent']}`)
                                     else if item['skill'] == 'Backend'
                                         each word in item['tech2'] 
-                                            li.skills-row__item.skill
-                                                .skill__title #{word['name']} 
-                                                .skill__percent #{word['percent']}
+                                            li.skills-row__item
+                                                .circle 
+                                                    .skill__title #{word['name']} 
+                                                    svg.circles(viewBox='0 0 110 110')
+                                                        circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                                                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second circle-${word['percent']}`)
                                     else if item['skill'] == 'Workflow'
                                         each word in item['tech3'] 
-                                            li.skills-row__item.skill
-                                                .skill__title #{word['name']} 
-                                                .skill__percent #{word['percent']}
+                                            li.skills-row__item
+                                                .circle 
+                                                    .skill__title #{word['name']} 
+                                                    svg.circles(viewBox='0 0 110 110')
+                                                        circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                                                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second circle-${word['percent']}`)
         section.section.map 
             .google-map#mapkit-8431
             .map__data  

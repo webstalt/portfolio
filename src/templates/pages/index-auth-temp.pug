@@ -7,11 +7,17 @@ block content
     section.section.index        
         form(action="form" method="post").form
             .form__block                                            
-                .block-subtitle Авторизуйтесь
+                .block-subtitle Авторизуйтесь                
                 .form__row
-                    input(name="login" id="login" placeholder="Логин").form__input.form__input-text.form__input_login
+                    label(for="login").form__label-img
+                        svg.form__label-icon
+                            use(xlink:href="assets/images/icons/sprite.svg#login")
+                    input(name="login" id="login" placeholder="Логин").form__input.form__input-text.form__input_round-right
                 .form__row
-                    input(name="password" id="password" placeholder="Пароль").form__input.form__input-text
+                    label(for="password").form__label-img
+                        svg.form__label-icon
+                            use(xlink:href="assets/images/icons/sprite.svg#password")
+                    input(name="password" id="password" placeholder="Пароль").form__input.form__input-text.form__input_round-right
                 .form__row
                     label(for="imahuman").form__label
                         input(type="checkbox" id="imahuman" name="human").form__input-checkbox
@@ -31,6 +37,6 @@ block content
                             span.form__input-inner
                         span.form__label-text Не уверен
                 .index__btns
-                    a.index__btn(href="https://miabangtta.github.io/portfolio-build/index.html").button На главную
+                    a(href="https://miabangtta.github.io/portfolio-build/index.html").button На главную
                     button.index__btn.button(type="submit") Войти
     .index__copyright © Мария Миронова | Создано с любовью в LoftSchool | 2017-2018

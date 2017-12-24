@@ -12,4 +12,10 @@
             fill: #ebefe2;
         }
     }
+    &_tablets {
+        display: none;
+        @include tablets {
+            display: initial;
+        }
+    }
 }
