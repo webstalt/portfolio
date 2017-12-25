@@ -8,9 +8,8 @@ block content
         include ../common/hero.pug
         svg.triangle.triangle_fill_white.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none")
             polygon(points="0,0   0,86   500,86   500,75.5 1000,0   1000,86   500,86   500,75.5")      
-        .section-title
-                .block-title Мои работы
-                .title-after.title-works
+        .section-title.title-works
+                .block-title Мои работы                
         section.section.slider
             .slider__info
                 .block-subtitle Сайт авиакомпании
@@ -28,10 +27,8 @@ block content
                 a.slider__btn.slider__btn_up
                     img(src="", alt="").slider__img
                     img(src="./assets/images/icons/arrow_down.svg").slider__arrow.slider__arrow_prev
-        .section-title
-            .block-title Что обо мне 
-                | говорят
-            .title-after.title-about
+        .section-title.title-reviews
+            .block-title Что обо мне говорят
         section.reviews            
             .container
                 ul.reviews__list

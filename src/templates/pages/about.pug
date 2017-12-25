@@ -110,8 +110,8 @@ block content
                                                     svg.circles(viewBox='0 0 110 110')
                                                         circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
                                                         circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second circle-${word['percent']}`)
-        section.section.map 
-            .google-map#mapkit-8431
+        section.section.map
+            #google-map 
             .map__data  
                 .contacts
                     .block-subtitle.contacts__subtitle Контакты
@@ -130,7 +130,3 @@ block content
                                     img(src=`./assets/images/icons/${item[0]}.svg` alt=`${item[0]}`).contacts-row__pic
                                 .contacts-row__title #{item[1]}
     include ../common/footer.pug
-    script(src="https://maps.googleapis.com/maps/api/js?key=&extension=.js")
-    script(src="https://cdn.mapkit.io/v1/infobox.js")
-    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet")
-    link(href="https://cdn.mapkit.io/v1/infobox.css" rel="stylesheet")

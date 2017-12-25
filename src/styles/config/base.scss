@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 250px;
 }
 
 .block-title {
@@ -71,12 +71,20 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center;
     margin: 70px 0;
 
-    @include tablets {
-
-    }
-
-    @include phones {
-        
+    &:before {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 250px auto;
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 250px;
+        z-index: 1;
+        opacity: 0.1;
+        top: 0;
     }
 
     &:after {
@@ -90,21 +98,6 @@ h1, h2, h3, h4, h5, h6, p {
         height: 5px;
         background-color: $gray;
     }
-}
-
-.title-after {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px auto;
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 200px;
-    z-index: 1;
-    opacity: 0.1;
 }
 
 .title-img {

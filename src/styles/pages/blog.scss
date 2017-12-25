@@ -8,8 +8,9 @@
 }
 
 .title-blog {
-    width: 500px;
-    background-image: url(../images/icons/blog_header.svg);
+    .block-title:before {
+        background-image: url(../images/icons/blog_header.svg);
+    }
 }
 
 .blog__sidebar {
@@ -29,7 +30,13 @@
             position: absolute;
             transform: translateY(-50%);
         }
-    }
+        &_visible {
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }    
 }
 
 .blog__headings-list {

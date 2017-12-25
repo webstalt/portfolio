@@ -1,5 +1,8 @@
+
 .title-works {
+    .block-title:before { 
     background-image: url('../images/icons/works_header.svg');
+    }
 }
 
 .slider {
@@ -96,6 +99,17 @@
 
 .slider__link-text {
     display: inline-flex;
+}
+
+.title-reviews {
+    line-height: 1;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .block-title:before {
+        background-image: url(../images/icons/about_header.svg);
+    }
 }
 
 .reviews {

@@ -17,7 +17,7 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 
 const gulpWebpack = require('gulp-webpack');
-const webpack = require('webpack');
+const webpack = require("webpack-stream");
 const webpackConfig = require('./webpack.config.js');
 
 const notify = require("gulp-notify");
@@ -97,12 +97,13 @@ function clean() {
     return del(paths.root);
 }
 
-// webpack 
+// webpack
 function scripts() {
-    return gulp.src('src/scripts/app.js')
-        .pipe(gulpWebpack(webpackConfig, webpack))
-        .pipe(gulp.dest(paths.scripts.dest));
-}
+    return gulp
+      .src("src/scripts/app.js")
+      .pipe(webpack(require("./webpack.config.js")))
+      .pipe(gulp.dest(paths.scripts.dest));
+    }
 
 // watcher
 function watch() {
