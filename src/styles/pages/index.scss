@@ -11,7 +11,7 @@
     height: 100%;
 }
 
-.index__auth {
+.index__flip-button {
     position: absolute;
     top: 30px;
     right: 30px;
@@ -19,15 +19,55 @@
     padding: 0 25px;
 }
 
- .form__block, .index__block {
-    background-color: rgba(18, 38, 32, 0.6);
+.index__wrap {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000; 
+}
+
+.index__wrap_rotate .index__flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.index__flipper {
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+.form__block, .index__block {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     color: #fff;
-    border-radius: 20px;
-    overflow: hidden;
+    
+    overflow: hidden;    
+    border-radius: 20px;    
+    background-color: rgba(18, 38, 32, 0.6);
+    
     & .user {
         margin: 40px;
         text-align: center;
@@ -38,14 +78,31 @@
     }
 }
 
-.index__btns {
+
+.index__block {    
+	z-index: 2;
+}
+
+.form__block {
+    -webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.form__block, .index__block, .index__flipper {
+    width: 370px;
+    height: 410px;
+}
+
+.index__buttons {
     text-align: center;
     & button {
         line-height: initial;
     }
 }
 
-.index__btn {
+.index__button {
     padding: 15px 30px;
     font-size: 16px;
 }
@@ -56,7 +113,7 @@
     .block-subtitle {
         margin: 40px 70px;
     }
-    .index__btns {
+    .index__buttons {
         display: flex;
         width: 100%;
         a {
@@ -65,10 +122,25 @@
         }
     }
 
-    .index__btn {
+    .index__button {
         padding: 0;
         width: 50%;
     }
+}
+
+.form__inputs {    
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form__auth {
+    .form__row {
+        margin-bottom: 20px;
+    }
+}
+
+.form__check {
+    margin-bottom: 10px;
 }
 
 .form__row {
@@ -76,12 +148,11 @@
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .form__label-img {
-    width: 2.8125rem;
-    height: 2.8125rem;
+    width: 45px;
+    height: 45px;
     background: #f0efe9;
     display: inline-block;
     vertical-align: middle;
@@ -129,7 +200,7 @@
 }
 
 .form__input-circle {
-    @include circle(1rem, #fff);
+    @include circle(16px, #fff);
     position: relative;
     display: inline-flex;
     align-items: center;

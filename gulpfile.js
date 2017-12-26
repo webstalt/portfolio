@@ -99,8 +99,7 @@ function clean() {
 
 // webpack
 function scripts() {
-    return gulp
-      .src("src/scripts/app.js")
+    return gulp.src("src/scripts/app.js")
       .pipe(webpack(require("./webpack.config.js")))
       .pipe(gulp.dest(paths.scripts.dest));
     }
