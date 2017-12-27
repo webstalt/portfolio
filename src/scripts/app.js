@@ -19,25 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
        
     console.log('dom is ready');
 });
-// function f() {
-// const container = document.getElementsByClassName('index__wrap');
-// const flipButton = document.getElementsByClassName('index__flip-button');
-
-// function flip() {
-//     flipButton.addEventListener('click', e => {
-//         e.preventDefault();
-//         container.classList.toggle("index__wrap_rotate");
-//     });
-// };
-
-// return flip();
-
-
-// };
-// f();
 
 const container = document.querySelector('.index__wrap');
 const flipButton = document.querySelector('.index__flip-button');
+const flipBack = document.querySelector('.index__button-back');
 
 (function() {
             
@@ -45,12 +30,16 @@ const flipButton = document.querySelector('.index__flip-button');
         e.preventDefault();
         container.classList.toggle("index__wrap_rotate");
         });
-  
+   
+        flipBack.addEventListener('click', e => {
+        e.preventDefault();
+        container.classList.toggle("index__wrap_rotate");
+        });
 })();
 
-const burgerInit = document.querySelector('hamburger');
+// const burgerInit = document.querySelector('hamburger');
 
-burgerInit.addEventListener('click', e => {
-    e.preventDefault();
-    burgerInit.classList.toggle('hero__menu_active'); 
-});
+// burgerInit.addEventListener('click', e => {
+//     e.preventDefault();
+//     burgerInit.classList.toggle('hero__menu_active'); 
+// });
