@@ -106,10 +106,10 @@
     flex-direction: row;
     margin-bottom: 40px;
     flex-wrap: wrap;
-    margin-right: -40px;
     
     @include tablets {
         justify-content: center;
+        margin-right: -40px;
     } 
 }
 
@@ -142,10 +142,10 @@
     // background-size: cover;
 }
 
-#google-map {   
-    height: 100%;
-    width: 100%;
-}
+// #google-map {   
+//     height: 100%;
+//     width: 100%;
+// }
 
 .map__data {
     position: absolute;

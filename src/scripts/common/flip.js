@@ -1,5 +1,5 @@
-const flipButton = document.querySelectorAll('.index__flip-button');
-const container = document.querySelectorAll('.index__wrap');
+const flipButton = document.querySelector('.index__flip-button');
+const container = document.querySelector('.index__wrap');
  
     function flipEffect(){
         flipButton.onclick = function() {

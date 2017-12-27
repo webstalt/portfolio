@@ -2,12 +2,12 @@ const slider = require('./common/slider');
 // const map = require('./common/map');
 const svg4everybody = require('./common/svg4everybody');
 const $ = require('jquery');
-const flip = require('./common/flip');
+// const flip = require('./common/flip');
 
 
 // const threejs = require('./common/three.min.js');
 // const webGL = require('./common/webgl');
-flip();
+// flip();
 slider();
 // map();
 $();
@@ -16,10 +16,11 @@ svg4everybody();
 // webgl();
 
 document.addEventListener('DOMContentLoaded', function() {
+       
     console.log('dom is ready');
 });
 // function f() {
-// const container = document.getElementsByClassname('index__wrap');
+// const container = document.getElementsByClassName('index__wrap');
 // const flipButton = document.getElementsByClassName('index__flip-button');
 
 // function flip() {
@@ -35,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // };
 // f();
 
-const container = document.getElementsByClassname('index__wrap');
-const flipButton = document.getElementsByClassName('index__flip-button');
+const container = document.querySelector('.index__wrap');
+const flipButton = document.querySelector('.index__flip-button');
 
 (function() {
             
@@ -46,3 +47,10 @@ const flipButton = document.getElementsByClassName('index__flip-button');
         });
   
 })();
+
+const burgerInit = document.querySelector('hamburger');
+
+burgerInit.addEventListener('click', e => {
+    e.preventDefault();
+    burgerInit.classList.toggle('hero__menu_active'); 
+});
