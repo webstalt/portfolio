@@ -14,12 +14,65 @@
     position: absolute;
     top: 30px;
     right: 30px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+
+    & .menu {
+        display: none;
+    }
+}
+
+.hero__menu_active {
+    & .menu {        
+        display: block;
+    }
+
+    & .hero__menu-icon {
+        position: fixed;
+        right: 30px;
+    }
 }
 
 .hero__menu-icon {
     height: 40px;
     width: 40px;
+    overflow: hidden;
+    z-index: 1001;
 }
+
+.hero__burger-line {
+    width: 40px;
+    height: 3px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 9px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hero__menu_active .hero__burger-line:nth-child(2){
+    opacity: 0;
+    margin: 10px auto;
+  }
+  
+  .hero__menu_active .hero__burger-line:nth-child(1){
+    -webkit-transform: translateY(13px) rotate(45deg);
+    -ms-transform: translateY(13px) rotate(45deg);
+    -o-transform: translateY(13px) rotate(45deg);
+    transform: translateY(13px) rotate(45deg);
+    margin: 10px auto;
+  }
+  
+  .hero__menu_active .hero__burger-line:nth-child(3){
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+    -ms-transform: translateY(-13px) rotate(-45deg);
+    -o-transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-13px) rotate(-45deg);
+    margin: 10px auto;
+  }
+
 
 .hero__user {
     position: absolute;

@@ -21,7 +21,7 @@
     }
 }
 
-.socials__rounded {
+.footer__nav {
     .socials__pic {
         opacity: 0.5;
         
@@ -30,5 +30,9 @@
             fill: #fff;
             opacity: 1;
         }
+    }
+
+    .socials__list {
+        margin-left: -10px;
     }
 }
