@@ -5,88 +5,48 @@
     }
 }
 
-.slider {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 100vh;
-    @include tablets {
-        height: auto;
-        flex-wrap: nowrap;
-    }
-}
-.slider__info {
-    background-color: #ebefe2;
-    width: 50%;
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // @include tablets {
+    //     order: -10;
+    // }
+// }
 
-    .block-subtitle {
-        margin-bottom: 30px;
-    }
+// .slider__buttons {
+//     width: 50%;
+//     height: 30%;
+//     display: flex;
 
-    @include tablets {
-        height: 300px;
-    }
-}
+//     @include tablets {
+//         height: 100px;
+//     }
+// }
 
-.slider__desc {
-    color: $fresh;
-    text-transform: uppercase;
-    margin-bottom: 60px;
-}
+// .slider__button {
+//     width: 50%;
+//     background-color: #f1ede1;
+//     position: relative;
+//     .slider__img {
+//         filter: grayscale(0.5);
+//     }
 
-.slider__display {
-    background-color: #e1e4d7;
-    width: 50%;
-    height: 70%;
-    overflow: hidden;
+//     .slider__arrow {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//     }
+// }
 
-    @include tablets {
-        order: -10;
-    }
-}
-
-.slider__btns {
-    width: 50%;
-    height: 30%;
-    display: flex;
-
-    @include tablets {
-        height: 100px;
-    }
-}
-
-.slider__btn {
-    width: 50%;
-    background-color: #f1ede1;
-    position: relative;
-    .slider__img {
-        filter: grayscale(0.5);
-    }
-
-    .slider__arrow {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.slider__info, .slider__display, .slider__btns {
-    @include tablets {
-        width: 100%;
-    }
-}
+// .slider__info, .slider__display, .slider__buttons {
+//     @include tablets {
+//         width: 100%;
+//     }
+// }
 
 .slider__link {
     text-decoration: none;
 }
 
-.slider__link-btn {
+.slider__link-button {
     padding: 0 15px;
     display: flex;
     align-items: center;

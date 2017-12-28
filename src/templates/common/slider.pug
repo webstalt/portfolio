@@ -1,10 +1,45 @@
-.slider-wrap
-    ul#slides
-        li.slide.showing
-            img(src="./assets/images/content/airplanet.png", alt="airplanet")
-        li.slide
-            img(src="./assets/images/content/burgers.png", alt="burgers")
-        li.slide
-    .buttons
-        button.button.controls#previous &lt;
-        button.button.controls#next &gt;
+            
+.slider__display 
+    ul.slider__list
+        li.slider__item.slider__item_active
+            .slider__image
+                .slider__pic.slider__pic-avia
+            .slider__info
+                .block-subtitle Сайт авиакомпании
+                .slider__desc Html, css, javascript
+                a.slider__link(href="#")
+                    button(type="button").button.slider__link-button
+                        img.slider__link-pic(src="./assets/images/icons/link.svg", alt="link")
+                        .slider__link-text Посмотреть сайт
+        li.slider__item
+            .slider__image
+                .slider__pic.slider__pic-burger
+            .slider__info
+                .block-subtitle Landing page для бургерной
+                .slider__desc Html, css, javascript            
+                a.slider__link(href="#")
+                    button(type="button").button.slider__link-button
+                        img.slider__link-pic(src="./assets/images/icons/link.svg", alt="link")
+                        .slider__link-text Посмотреть сайт
+        li.slider__item
+            .slider__image
+                .slider__pic.slider__pic-portfolio
+            .slider__info
+                .block-subtitle Сайт-портфолио
+                .slider__desc Javascript, vue.js, node.js
+                a.slider__link
+                    button(type="button").button.slider__link-button
+                        img.slider__link-pic(src="./assets/images/icons/link.svg", alt="link")
+                        .slider__link-text Вы здесь
+    nav.slider-nav
+        ul.slider-nav__list
+            li.slider-nav__item.slider-nav__item_active
+            li.slider-nav__item
+            li.slider-nav__item
+    .slider__buttons
+        a.slider__controls.slider__controls_previous 
+            svg.slider__controls_previous-pic
+                use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
+        a.slider__controls.slider__controls_next 
+            svg.slider__controls_next-pic
+                use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')

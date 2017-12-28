@@ -9,24 +9,16 @@ block content
         svg.triangle.triangle_fill_white.triangle_up(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none")
             polygon(points="0,0   0,86   500,86   500,75.5 1000,0   1000,86   500,86   500,75.5")      
         .section-title.title-works
-                .block-title Мои работы                
+            .block-title Мои работы                
         section.section.slider
-            .slider__info
-                .block-subtitle Сайт авиакомпании
-                .slider__desc Html, css, javascript
-                a.slider__link(href="#")
-                    button(type="button").button.slider__link-btn
-                        img.slider__link-pic(src="./assets/images/icons/link.svg", alt="link")
-                        .slider__link-text Посмотреть сайт
-            .slider__display 
-                include ../common/slider.pug
-            .slider__btns 
-                a.slider__btn.slider__btn_down
-                    img(src="", alt="").slider__img
-                    img(src="./assets/images/icons/arrow_down.svg").slider__arrow.slider__arrow_next
-                a.slider__btn.slider__btn_up
-                    img(src="", alt="").slider__img
-                    img(src="./assets/images/icons/arrow_down.svg").slider__arrow.slider__arrow_prev
+            include ../common/slider.pug
+            //- .slider__buttons 
+            //-     a.slider__button.slider__button_down
+            //-         img(src="", alt="").slider__img
+            //-         img(src="./assets/images/icons/arrow_down.svg").slider__arrow.slider__arrow_next
+            //-     a.slider__button.slider__button_up
+            //-         img(src="", alt="").slider__img
+            //-         img(src="./assets/images/icons/arrow_down.svg").slider__arrow.slider__arrow_prev
         .section-title.title-reviews
             .block-title Что обо мне говорят
         section.reviews            
