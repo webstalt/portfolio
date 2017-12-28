@@ -2,7 +2,7 @@ const slider = require('./common/slider');
 // const map = require('./common/map');
 const svg4everybody = require('./common/svg4everybody');
 const $ = require('jquery');
-
+// const webGL = require('./common/index-water');
 
 // const threejs = require('./common/three.min.js');
 // const webGL = require('./common/webgl');
@@ -11,7 +11,7 @@ slider();
 $();
 svg4everybody();
 // threejs();
-// webgl();
+// webGL();
 
 
 // flip

@@ -24,12 +24,12 @@ function setupListners(){
     previous.onclick = function(){
         goToSlide(currentSlide-1);
     }
-    nav.onclick = function(e){
-        let index = navArr.indexOf(e.currentTarget);
-        console.log(index);
-
-        currentSlide = index;
-        goToSlide(currentSlide);
+    
+    navArr.onclick = function(e){ 
+        if (e.target.tagName == 'LI') { 
+            let nextSlide = e.target.getAttribute('data-scroll-to'); 
+            goToSlide(nextSlide); 
+        } 
     }
 }
 
