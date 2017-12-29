@@ -64,12 +64,6 @@
     }
 }
 
-// .title-about {
-//     background-image: url(../images/icons/about_header.svg);
-//     height: 250px;
-//     background-size: 250px auto;
-// }
-
 .user-desc {
     display: block;
     width: 50%;
@@ -109,7 +103,7 @@
     
     @include tablets {
         justify-content: center;
-        margin-right: -40px;
+        margin-right: 0;
     } 
 }
 
@@ -126,6 +120,11 @@
     color: $fresh;
     font-family: 'Roboto-Bold';
     margin-right: 40px;
+
+    @include tablets {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
 }
 
 .skill__title {

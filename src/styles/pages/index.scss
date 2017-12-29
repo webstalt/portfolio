@@ -17,6 +17,15 @@
     right: 30px;
     border-radius: 20px;
     padding: 0 25px;
+
+    @include phones {       
+        line-height: 39px;
+        top: 41px;
+        padding: 0 20px;
+        font-size: 14px;
+        right: auto;
+        left: auto;
+    }
 }
 
 .index__wrap {
@@ -76,6 +85,17 @@
     & .socials__list {
         margin: 0 25px 40px 25px;
     }
+
+    @include tablets {
+        & .user {
+            margin: 25px;
+        }
+    }
+    @include phones {
+        & .user {
+            margin: 40px;
+        }
+    }
 }
 
 
@@ -90,13 +110,23 @@
 	transform: rotateY(180deg);
 }
 
-.form__block, .index__block, .index__flipper {
+.form__block, .index__block, .index__flipper, .form {
     width: 370px;
     height: 410px;
+
+    @include tablets {
+        height: 390px;
+    }
+
+    @include phones {
+        width: 300px;
+        height: 410px;
+    }
 }
 
 .index__buttons {
     text-align: center;
+    bottom: 0;
     & button {
         line-height: initial;
     }
@@ -105,13 +135,26 @@
 .index__button {
     padding: 15px 30px;
     font-size: 16px;
+    bottom: 0;
+
+    @include phones {
+        padding: 13px 18px;
+    }
 }
 
 // section form
-
 .form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     .block-subtitle {
         margin: 40px 70px;
+
+        @include phones {
+            margin: 30px 38px;
+        }
     }
     .index__buttons {
         display: flex;
@@ -125,22 +168,39 @@
     .index__button {
         padding: 0;
         width: 50%;
+        // @include phones {
+        //     padding: 0 16px;
+        // }
     }
 }
 
 .form__inputs {    
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.form__auth {
-    .form__row {
-        margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    & .form__row {
+        margin-bottom: 10px;
+        @include tablets {
+            margin-bottom: 10px;
+        }
     }
 }
 
-.form__check {
-    margin-bottom: 10px;
+.form__auth {
+    .form__row:nth-child(1) {
+        margin-bottom: 20px;
+    }
+    @include tablets {
+    .form__row:nth-child(2) {
+        margin-bottom: 15px;
+    }
+    }
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .form__row {
@@ -148,6 +208,9 @@
     flex-direction: row;
     width: 100%;
     justify-content: center;
+    @include phones {
+        width: 90%;        
+    }
 }
 
 .form__label-img {
@@ -174,6 +237,10 @@
     padding: 8px 17px;
     &:focus {
         border: transparent;
+    }
+    
+    @include phones {
+        width: 90%;
     }
 }
 
@@ -276,4 +343,11 @@
     text-align: center;
     bottom: 1rem;
     position: absolute;
+    
+    @include tablets {
+        height: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    } 
 }

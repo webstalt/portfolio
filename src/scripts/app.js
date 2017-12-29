@@ -32,7 +32,6 @@ if (document.querySelector('.index__wrap') !== null) {
     });
 }
 
-
 // menu 
 if (document.querySelector('.hero__menu-icon') !== null) {
     
@@ -44,3 +43,22 @@ if (document.querySelector('.hero__menu-icon') !== null) {
         menu.classList.toggle('hero__menu_active'); 
     });
 }
+
+// articles
+if (document.querySelector('.article__listHHHHHHHHHHHH') !== null){ 
+
+    const centerY = document.documentElement.clientHeight / 2;
+    const articles = document.querySelector('.article__listHHHHHHHHHHHH');
+
+    function scrollDetect() {
+
+    document.onscroll = function(){
+        let elemPosition = articles.elementFromPoint(centerY);
+    }
+    
+    if (elemPosition > centerY) {
+        let articleNum = elem.target.getAttribute('data-scroll-to');
+        
+            }
+        }
+    }

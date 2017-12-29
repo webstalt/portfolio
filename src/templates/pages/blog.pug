@@ -4,10 +4,10 @@ block variables
     - var title = "Блог" 
     -
         var articles = [
-            ['Заголовок статьи', '17.12.2017', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium quidem, repellat ullam iure adipisci dolores distinctio tempore veritatis, velit harum nobis voluptate consequuntur enim maxime quo quae, minus quibusdam?'],
-            ['Заголовок статьи1', '07.12.2017', '11Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium quidem, repellat ullam iure adipisci dolores distinctio tempore veritatis, velit harum nobis voluptate consequuntur enim maxime quo quae, minus quibusdam?'],
-            ['Заголовок статьи2', '29.11.2017', '111Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium quidem, repellat ullam iure adipisci dolores distinctio tempore veritatis, velit harum nobis voluptate consequuntur enim maxime quo quae, minus quibusdam?'],
-            ['Заголовок 3', '28.11.2017', '11111Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium quidem, repellat ullam iure adipisci dolores distinctio tempore veritatis, velit harum nobis voluptate consequuntur enim maxime quo quae, minus quibusdam?']                        
+            ['4', 'Заголовок статьи', '17.12.2017', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium quidem, repellat ullam iure adipisci dolores distinctio tempore veritatis, velit harum nobis voluptate consequuntur enim maxime quo quae, minus quibusdam?'],
+            ['3', 'Заголовок статьи1', '07.12.2017', '11Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium quidem, repellat ullam iure adipisci dolores distinctio tempore veritatis, velit harum nobis voluptate consequuntur enim maxime quo quae, minus quibusdam?'],
+            ['2', 'Заголовок статьи2', '29.11.2017', '111Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium quidem, repellat ullam iure adipisci dolores distinctio tempore veritatis, velit harum nobis voluptate consequuntur enim maxime quo quae, minus quibusdam?'],
+            ['1', 'Заголовок 3', '28.11.2017', '11111Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium quidem, repellat ullam iure adipisci dolores distinctio tempore veritatis, velit harum nobis voluptate consequuntur enim maxime quo quae, minus quibusdam?']                        
         ]
 
 block content
@@ -23,13 +23,13 @@ block content
                     ul.blog__headings-list                 
                         each item in articles
                             li.blog__headings-item
-                                a.blog__headings-link #{item[0]}                        
+                                a.blog__headings-link(data-scroll-to=`${item[0]}`) #{item[1]}                        
                 .blog__content.articles
                     ul.articles__list
                         each item in articles
                             li.articles__item
-                                .articles__title #{item[0]}   
-                                .articles__date #{item[1]}   
-                                p  #{item[2]}                                
+                                .articles__title #{item[1]}   
+                                .articles__date #{item[2]}   
+                                p  #{item[3]}                                
     include ../common/footer.pug
             

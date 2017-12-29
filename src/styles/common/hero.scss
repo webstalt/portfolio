@@ -4,6 +4,10 @@
     position: relative;
     height: 100%;
     padding: 30px;
+
+    @include phones {
+        padding: 15px 10px;
+    }
 }
 
 .hero__socials {
@@ -15,11 +19,14 @@
     top: 30px;
     right: 30px;
     cursor: pointer;
-    height: 40px;
-    width: 40px;
 
     & .menu {
         display: none;
+    }
+
+    @include phones {
+        top: 15px;
+        right: 10px;
     }
 }
 
@@ -31,13 +38,14 @@
     & .hero__menu-icon {
         position: fixed;
         right: 30px;
+
+        @include phones {
+            right: 10px;
+        }
     }
 }
 
 .hero__menu-icon {
-    height: 40px;
-    width: 40px;
-    overflow: hidden;
     z-index: 1001;
 }
 
@@ -50,6 +58,10 @@
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    @include phones {
+        width: 30px;
+        margin: 5px auto;
+    }
   }
 
   .hero__menu_active .hero__burger-line:nth-child(2){

@@ -1,0 +1,26 @@
+.spinner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0; top: 0;
+    right: 0; bottom: 0;
+    background-image: url('/assets/images/content/forest_prel_bg.jpg');
+    background-size: cover;
+}
+
+.spinner__pic {
+    animation: spin 1000ms linear infinite;
+}
+
+@keyframes spin {
+    0% { 
+      transform:
+        translateZ(0)
+        rotate(0deg);
+    } 
+    100% {
+        transform:
+        translateZ(0)
+        rotate(360deg);
+    }
+}

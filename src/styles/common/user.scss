@@ -27,9 +27,12 @@
     font-size: 35px;
     font-family: "Roboto-Medium", Arial, sans-serif;
     margin-bottom: 15px;
+    @include phones {
+        font-size: 23px;
+    }
 }
 
 .user__data {
     font-family: "Roboto-Regular", Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
 }

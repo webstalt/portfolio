@@ -59,7 +59,7 @@
         text-align: center;
     }
 
-    &:hover {
+    &_active {
         font-family: "Roboto-Bold", Arial, sans-serif;
         color: $fresh;
         border-right: 2px solid $fresh;
@@ -69,6 +69,10 @@
             border: none;
             text-decoration: underline;
         }
+    }
+
+    &:hover {
+        color: $fresh;
     }
 }
 

@@ -5,43 +5,6 @@
     }
 }
 
-    // @include tablets {
-    //     order: -10;
-    // }
-// }
-
-// .slider__buttons {
-//     width: 50%;
-//     height: 30%;
-//     display: flex;
-
-//     @include tablets {
-//         height: 100px;
-//     }
-// }
-
-// .slider__button {
-//     width: 50%;
-//     background-color: #f1ede1;
-//     position: relative;
-//     .slider__img {
-//         filter: grayscale(0.5);
-//     }
-
-//     .slider__arrow {
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//     }
-// }
-
-// .slider__info, .slider__display, .slider__buttons {
-//     @include tablets {
-//         width: 100%;
-//     }
-// }
-
 .slider__link {
     text-decoration: none;
 }
@@ -90,6 +53,7 @@
 
     @include phones {
         flex-direction: column;
+        margin-top: 15px;
     }
 }
 
@@ -104,7 +68,8 @@
     }
 
     @include phones {
-        width: 100%;
+        width: 95%;
+        margin-bottom: 20px;
     }
 }
 
@@ -114,6 +79,10 @@
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 20px;
+    @include phones {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .reviews__content {
@@ -140,6 +109,10 @@
     overflow: hidden;
     text-align: center;
     margin-bottom: 150px;
+
+    @include phones {
+        margin-bottom: 100px;
+    }
 }
 
 .message__title {
@@ -165,6 +138,11 @@
         padding: 15px;
         margin: 0 20px 20px 20px;
     }
+    @include phones {
+        .section-subtitle {           
+            font-size: 21px;
+        }
+    }
 }
 
 .message__buttons {
@@ -174,4 +152,10 @@
     .button {
         padding: 0 50px;
     } 
+
+    @include phones {
+        .button {
+            padding: 0 35px;
+        }
+    }
 }
