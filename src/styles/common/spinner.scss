@@ -6,21 +6,69 @@
     right: 0; bottom: 0;
     background-image: url('/assets/images/content/forest_prel_bg.jpg');
     background-size: cover;
+    z-index: 1005;
+    position: relative;
+    display: none;
+}
+
+.spinner__wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    flex-direction: column;
+}
+
+.spinner__percent {
+    font-family: Arial;
+    font-size: 24px;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+    position: absolute;
 }
 
 .spinner__pic {
-    animation: spin 1000ms linear infinite;
+    animation: spin 2s ease-out;
+    
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+    opacity: 1;
 }
 
 @keyframes spin {
-    0% { 
-      transform:
-        translateZ(0)
-        rotate(0deg);
-    } 
-    100% {
-        transform:
-        translateZ(0)
-        rotate(360deg);
+    // 0% {opacity: 0.0;}
+    // 50% {opacity: 1.0;}
+    // 100% {opacity: 0.0;}
+    // }
+    0% {
+        clip-path: rect(0, 0, 4px, 0);
+        opacity: 0.4;
+      }
+      4% {
+        clip-path: rect(0, 6.66667px, 10px, 0);
+        opacity: 0.6;
+      }
+      15% {
+        clip-path: rect(0, 13.33333px, 5px, 0);
+        opacity: 0.8;
+      }
+      20% {
+        clip-path: rect(0, 30px, 8px, 0);
+         opacity: 1;
+      }    
+      80% {
+        clip-path: rect(0, 30px, 10px, 0);
+        opacity:0;      }
+    
+      90% {
+        clip-path: rect(0, 30px, 15px, 0);
+        opacity: 0;
+      }    
+      100% {
+        clip-path: rect(0, 30px, 17px, 0);
+        opacity:0;
+     }
     }
-}

@@ -103,6 +103,11 @@ function scripts() {
       .pipe(webpack(require("./webpack.config.js")))
       .pipe(gulp.dest(paths.scripts.dest));
     }
+function mapScript() {
+    return gulp.src("src/scripts/common/map.js")
+        .pipe(webpack(require("./webpack.config.js")))
+        .pipe(gulp.dest(paths.scripts.dest));
+    }
 
 // watcher
 function watch() {
@@ -160,9 +165,10 @@ exports.images = images;
 exports.scripts = scripts;
 exports.fonts = fonts;
 exports.sprite = sprite;
+exports.mapScript = mapScript;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts, fonts, sprite),
+    gulp.parallel(styles, templates, images, scripts, mapScript, fonts, sprite),
     gulp.parallel(watch, server)
 ));
