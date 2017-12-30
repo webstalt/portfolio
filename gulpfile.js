@@ -39,7 +39,8 @@ const paths = {
     },
     scripts: {
         src: 'src/scripts/**/*.js',
-        dest: 'build/assets/scripts/'
+        dest: 'build/assets/scripts/',
+        library: 'build/assets/scripts/common'
     },
     fonts: {
         src: 'src/fonts/*.*',
@@ -106,7 +107,7 @@ function scripts() {
 function mapScript() {
     return gulp.src("src/scripts/common/map.js")
         .pipe(webpack(require("./webpack.config.js")))
-        .pipe(gulp.dest(paths.scripts.dest));
+        .pipe(gulp.dest(paths.scripts.library));
     }
 
 // watcher

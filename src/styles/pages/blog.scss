@@ -14,26 +14,45 @@
 }
 
 .blog__sidebar {
-    width: 23%;
-    margin-right: 7%;
+    width: 250px;
+
+    &_freeze {
+        position: fixed;
+        top: 30px;
+        @include tablets {
+            position: initial;
+            top: initial;
+        }        
+    }
 
     @include tablets {
-        width: 100%;
-        position: absolute;
-        left: -800px;
-        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        width: 0px;
         background-color: $light;
-        &:after {
-            @include circle(15px, $light);
-            left: -50%;
-            top: 50%;
-            position: absolute;
+        z-index: 100;
+        &-trigger {
+            content: "";
+            position: fixed;
+            @include circle(50px, $light);
+            left: -25px;
+            top: 50vh;
             transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 95;
         }
         &_visible {
-            left: 0;
-            top: 0;
-            width: 80%;            
+            width: 80%;   
+            
+            & .blog__sidebar-trigger {
+                left: 76%;
+
+                @include phones {
+                    left: 72%;
+                }
+            }
         }
     }    
 }
@@ -42,10 +61,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    @include tablets {
+        height: 100%;
+        justify-content: center;
+        margin-right: 10%;
+    }
 }
 
 .blog__headings-link {
-    font-size: 1rem;
+    font-size: 16px;
     text-align: right;
     line-height: 40px;
     display: inline-block;
@@ -54,25 +79,17 @@
     border-right: 2px solid transparent;
     margin-bottom: 20px;
 
+    &:hover {
+        color: $fresh;
+    }
+
     @include tablets {
         color: rgba(#fff, 0.7);
         text-align: center;
-    }
 
-    &_active {
-        font-family: "Roboto-Bold", Arial, sans-serif;
-        color: $fresh;
-        border-right: 2px solid $fresh;
-
-        @include tablets {
+        &:hover {
             color: #fff;
-            border: none;
-            text-decoration: underline;
         }
-    }
-
-    &:hover {
-        color: $fresh;
     }
 }
 
@@ -84,16 +101,22 @@
 
         @include tablets {
             color: #fff;
-            text-decoration: underline;
             border: none;
         }
     }
 }
 
 .blog__content {
-    width: 65%;
+    width: 65%;    
+    margin-left: auto;
+
     @include tablets {
         width: 95%;
+
+        &_short {
+            margin-left: 85%;
+            overflow: hidden;
+        }
     }
 }
 

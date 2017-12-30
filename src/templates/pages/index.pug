@@ -4,8 +4,7 @@ block variables
     - var title = "Добро пожаловать"
 
 block content
-    //- .Background
-    //-     canvas.Background-canvas
+    .webgl
     section.section.index
         button(type="button").button.index__flip-button.button_transparent Авторизоваться
         .index__wrap  
@@ -54,3 +53,5 @@ block content
                             a(href="#").button.index__button-back На главную
                             button.index__button.button(type="submit") Войти      
     .index__copyright © Мария Миронова | Создано&nbsp;с&nbsp;любовью&nbsp;в&nbsp;LoftSchool&nbsp;| 2017-2018
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js") 
+    script(src="http://threejs.org/build/three.min.js")

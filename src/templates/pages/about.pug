@@ -127,5 +127,6 @@ block content
                                 // второй блок для отступа между иконкой и текстом
                                 .contacts-row__icon
                                     img(src=`./assets/images/icons/${item[0]}.svg` alt=`${item[0]}`).contacts-row__pic
-                                .contacts-row__title #{item[1]}
-    include ../common/footer.pug
+                                .contacts-row__title #{item[1]}    
+        //- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnWF6Pr1KnNC-8U10281s4lP23pk3arVo&callback=initMap" async="async" defer="defer")
+        include ../common/footer.pug
