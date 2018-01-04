@@ -141,12 +141,15 @@
     // background-size: cover;
 }
 
-// #google-map {   
-//     height: 100%;
-//     width: 100%;
-// }
+.google-map {   
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+}
 
 .map__data {
+    z-index: 3;
     position: absolute;
     top: 50%;
     left: 50%;

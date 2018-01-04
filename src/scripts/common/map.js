@@ -1,16 +1,24 @@
 var initMap = () => {
-    var uluru = {lat: 55.761406, lng: 37.632170};
-    var map = new google.maps.Map(document.getElementById('google-map'), {
-        zoom: 18,
-        center: uluru,
+    var uluru = {
+        lat: 55.761406, 
+        lng: 37.632170
+    };
+    var map = new google.maps.Map(document.querySelector('.google-map'), {
+        zoom: 13,
+        center: {
+            lat: 55.760046, 
+            lng: 37.599969
+        },
         mapTypeControl: false,
+        scrollwheel : false,
         disableDefaultUI: true
     });
-    var marker = new google.maps.Marker({position: uluru, map: map});
+    var marker = new google.maps.Marker({position: uluru, map: map, icon: { 
+        url: "./assets/images/icons/map_marker.svg", scaledSize: new google.maps.Size(25, 35)}
+    });
 
     map.setOptions({styles: styles.forest});
-
-};
+}; 
 
 var styles = {
     default: null,
@@ -107,7 +115,6 @@ var styles = {
             stylers: [{color: '#9e9e9e'}]
         }
     ]
-}
+};
 
-// global.initMap = initMap;
 window.initMap = initMap;

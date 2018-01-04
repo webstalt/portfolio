@@ -25,12 +25,12 @@ block content
                     ul.blog__headings-list                 
                         each item in articles
                             li.blog__headings-item(data-scroll=`${item[0]}`)
-                                a.blog__headings-link #{item[1]}                        
+                                a.blog__headings-link(href=`#article${item[0]}` speed="1000") #{item[1]}                        
                 .blog__content.articles
                     ul.articles__list
                         each item in articles
                             li.articles__item(data-scroll-to=`${item[0]}`)
-                                .articles__title #{item[1]}   
+                                .articles__title(id=`article${item[0]}`) #{item[1]}   
                                 .articles__date #{item[2]}   
                                 p  #{item[3]}                                
     include ../common/footer.pug

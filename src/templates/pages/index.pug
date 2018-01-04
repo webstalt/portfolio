@@ -4,6 +4,7 @@ block variables
     - var title = "Добро пожаловать"
 
 block content
+    include ../common/spinner.pug
     .webgl
     section.section.index
         button(type="button").button.index__flip-button.button_transparent Авторизоваться
@@ -24,23 +25,23 @@ block content
                                 label(for="login").form__label-img
                                     svg.form__label-icon
                                         use(xlink:href="assets/images/icons/sprite.svg#login")
-                                input(name="login" id="login" placeholder="Логин").form__input.form__input-text.form__input_round-right
+                                input(name="login" id="login" placeholder="Логин" required).form__input.form__input-text.form__input_round-right
                             .form__row
                                 label(for="password").form__label-img
                                     svg.form__label-icon
                                         use(xlink:href="assets/images/icons/sprite.svg#password")
-                                input(name="password" id="password" placeholder="Пароль").form__input.form__input-text.form__input_round-right
+                                input(name="password" id="password" placeholder="Пароль" required).form__input.form__input-text.form__input_round-right
                         .form__inputs
                             .form__row.form__check
                                 label(for="imahuman").form__label
-                                    input(type="checkbox" id="imahuman" name="human").form__input-checkbox
+                                    input(type="checkbox" id="imahuman" name="human" required).form__input-checkbox
                                     span.form__input-square
                                         span.form__input-check
                                     span.form__label-text Я человек
                             .form__row Вы точно не робот?
                             .form__row
                                 label(for="notarobot").form__label
-                                    input(type="radio" id="notarobot" name="robot").form__input.form__input-radio 
+                                    input(type="radio" id="notarobot" name="robot" required).form__input.form__input-radio 
                                     span.form__input-circle
                                         span.form__input-inner
                                     span.form__label-text Да
@@ -51,7 +52,12 @@ block content
                                     span.form__label-text Не уверен
                         .index__buttons
                             a(href="#").button.index__button-back На главную
-                            button.index__button.button(type="submit") Войти      
+                            button.index__button.button(type="submit") Войти  
+        .index__message
+            .index__message-block
+                a.index__close
+                    span.index__close-icon
+                .index__error Не все поля заполнены верно   
     .index__copyright © Мария Миронова | Создано&nbsp;с&nbsp;любовью&nbsp;в&nbsp;LoftSchool&nbsp;| 2017-2018
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js") 
     script(src="http://threejs.org/build/three.min.js")

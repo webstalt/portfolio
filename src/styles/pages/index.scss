@@ -26,6 +26,7 @@
     right: 30px;
     border-radius: 20px;
     padding: 0 25px;
+    z-index: 90;
 
     @include phones {       
         line-height: 39px;
@@ -359,4 +360,82 @@
         flex-direction: column;
         justify-content: flex-end;
     } 
+}
+
+.index__message {
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    bottom: 0; right: 0;
+    position: fixed;
+    background-color: rgba($light, 0.7);
+    display: none;
+}
+
+.index__message-block {
+    width: 45%;
+    height: 40%;
+    background-color: #f4f5f0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    
+    @include tablets {
+        width: 65%;
+    }
+
+    @include phones {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+.index__close {
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-left: auto;
+    
+    &:hover {
+        .index__close-icon:before, .index__close-icon:after {            
+        background-color: rgba($gray, 1);
+        }
+    }
+}
+
+.index__close-icon {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        margin-top: -1px;
+        background-color: rgba($gray,0.7);
+        height: 4px;
+        margin-top: -2px;
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+}
+
+.index__error {
+    text-align: center;
+    font-size: 16px;
 }

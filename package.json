@@ -21,7 +21,8 @@
   "dependencies": {
     "del": "^3.0.0",
     "jquery": "^3.2.1",
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "vscode-languageserver": "^3.5.0"
   },
   "devDependencies": {
     "browser-sync": "^2.18.13",
@@ -40,6 +41,7 @@
     "gulp-svgmin": "^1.2.4",
     "gulp-webpack": "^1.5.0",
     "gulp.spritesmith": "^6.7.0",
+    "image-preloader": "^1.1.1",
     "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.10.0",
     "webpack-stream": "^4.0.0"
