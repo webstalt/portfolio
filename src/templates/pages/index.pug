@@ -4,10 +4,10 @@ block variables
     - var title = "Добро пожаловать"
 
 block content
-    //- include ../common/spinner.pug
-    .Background
-        canvas.Background-canvas
+    include ../common/spinner.pug    
     section.section.index
+        .Background
+            canvas.Background-canvas
         button(type="button").button.index__flip-button.button_transparent Авторизоваться
         .index__wrap  
             .index__flipper
@@ -54,12 +54,12 @@ block content
                         .index__buttons
                             a(href="#").button.index__button-back На главную
                             button.index__button.button(type="submit") Войти  
-        .index__message
-            .index__message-block
-                a.index__close
-                    span.index__close-icon
-                .index__error Не все поля заполнены верно   
-    .index__copyright © Мария Миронова | Создано&nbsp;с&nbsp;любовью&nbsp;в&nbsp;LoftSchool&nbsp;| 2017-2018
+            .index__message
+                .index__message-block
+                    a.index__close
+                        span.index__close-icon
+                    .index__error Не все поля заполнены верно   
+        .index__copyright © Мария Миронова | Создано&nbsp;с&nbsp;любовью&nbsp;в&nbsp;LoftSchool&nbsp;| 2017-2018
     //- script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js") 
     //- script(src="https://threejs.org/build/three.min.js")
-    script(async defer src="./assets/scripts/water/bundle.js")
+    script(async defer src="./assets/scripts/water/water.js")

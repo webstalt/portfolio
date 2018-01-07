@@ -104,11 +104,6 @@ function scripts() {
       .pipe(webpack(require("./webpack.config.js")))
       .pipe(gulp.dest(paths.scripts.dest));
     }
-function water() {
-    return gulp.src("src/scripts/common/water.js")
-        .pipe(webpack(require("./webpack.config.js")))
-        .pipe(gulp.dest(paths.scripts.water));
-    }
 
 // watcher
 function watch() {
@@ -130,6 +125,11 @@ function server() {
 function images() {
     return gulp.src(paths.images.src)
         .pipe(gulp.dest(paths.images.dest));
+}
+
+function waterjs() {
+    return gulp.src("src/scripts/common/water.js")
+            .pipe(gulp.dest(paths.scripts.water));
 }
 
 function fonts() {
@@ -166,10 +166,10 @@ exports.images = images;
 exports.scripts = scripts;
 exports.fonts = fonts;
 exports.sprite = sprite;
-exports.water = water;
+exports.waterjs = waterjs;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts, fonts, sprite, water),
+    gulp.parallel(styles, templates, images, scripts, fonts, sprite, waterjs),
     gulp.parallel(watch, server)
 ));

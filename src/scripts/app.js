@@ -1,7 +1,7 @@
-// const spinner = document.querySelector('.spinner');
-//     document.onload = function(){
-//     spinner.classList.add('spinner_hidden');
-//     }();
+const spinner = document.querySelector('.spinner');
+    document.onload = function(){
+    spinner.classList.add('spinner_hidden');
+    }();
 
 
 // const lodashUniq = require('lodash/uniq');
@@ -113,8 +113,6 @@ const slider = require('./common/slider');
 const svg4everybody = require('./common/svg4everybody');
 // const $ = require('jquery');
 const map =  require('./common/map');
-// const webGL = require('./common/webgl');
-
 slider();
 // $();
 svg4everybody();
