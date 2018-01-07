@@ -34,9 +34,9 @@ block content
                 form(action="form" method="post")
                     .message__form
                         .block-subtitle Связаться со мной
-                        input.message__name(placeholder="Имя")
-                        input.message__email(placeholder="Email")
-                        textarea.message__content(placeholder="Ваше сообщение")
+                        input.message__name(placeholder="Имя" required)
+                        input.message__email(placeholder="Email" required)
+                        textarea.message__content(placeholder="Ваше сообщение" required)
                         .message__buttons
                             button(type="submit").button Отправить
                             button(type="reset").button Очистить                  

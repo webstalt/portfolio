@@ -11,7 +11,7 @@ block variables
         ]
 
 block content
-    include ../common/spinner.pug
+    //- include ../common/spinner.pug
     .wrapper
         include ../common/hero.pug
         section.section
@@ -32,6 +32,6 @@ block content
                             li.articles__item(data-scroll-to=`${item[0]}`)
                                 .articles__title(id=`article${item[0]}`) #{item[1]}   
                                 .articles__date #{item[2]}   
-                                p  #{item[3]}                                
+                                p #{item[3]}                                
     include ../common/footer.pug
             
